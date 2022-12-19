@@ -7,6 +7,7 @@ export const mockDataAppoint = [
     age: 35,
     phone: "(665)121-5454",
     access: "Done",
+    sex: "Female",
   },
   {
     id: 2,
@@ -15,6 +16,7 @@ export const mockDataAppoint = [
     age: 42,
     phone: "(421)314-2288",
     access: "notAttended",
+    sex: "Male",
   },
   {
     id: 3,
@@ -23,6 +25,7 @@ export const mockDataAppoint = [
     age: 45,
     phone: "(422)982-6739",
     access: "Pending",
+    sex: "Male",
   },
   {
     id: 4,
@@ -31,6 +34,7 @@ export const mockDataAppoint = [
     age: 16,
     phone: "(921)425-6742",
     access: "Done",
+    sex: "Female",
   },
   {
     id: 5,
@@ -39,6 +43,7 @@ export const mockDataAppoint = [
     age: 31,
     phone: "(421)445-1189",
     access: "Pending",
+    sex: "Male",
   },
   {
     id: 6,
@@ -47,6 +52,7 @@ export const mockDataAppoint = [
     age: 150,
     phone: "(232)545-6483",
     access: "notAttended",
+    sex: "Male",
   },
   {
     id: 7,
@@ -55,6 +61,7 @@ export const mockDataAppoint = [
     age: 44,
     phone: "(543)124-0123",
     access: "Pending",
+    sex: "Male",
   },
   {
     id: 8,
@@ -63,6 +70,7 @@ export const mockDataAppoint = [
     age: 36,
     phone: "(222)444-5555",
     access: "Pending",
+    sex: "Male",
   },
   {
     id: 9,
@@ -71,6 +79,7 @@ export const mockDataAppoint = [
     age: 65,
     phone: "(444)555-6239",
     access: "Done",
+    sex: "Male",
   },
 ];
 
@@ -1375,7 +1384,8 @@ export const mockDataMedicalRecords = [
     age: 35,
     presciptionname: "Prescription",
     medicalreport: "Blood Report",
-    status: "view",
+    status: "Print",
+    sex: "Male",
   },
   {
     id: 2,
@@ -1383,7 +1393,8 @@ export const mockDataMedicalRecords = [
     age: 42,
     presciptionname: "Prescription",
     medicalreport: "Blood Report",
-    status: "view",
+    status: "Print",
+    sex: "Female",
   },
   {
     id: 3,
@@ -1391,7 +1402,8 @@ export const mockDataMedicalRecords = [
     age: 45,
     presciptionname: "Prescription",
     medicalreport: "Heart Report",
-    status: "view",
+    status: "Print",
+    sex: "Male",
   },
   {
     id: 4,
@@ -1399,7 +1411,8 @@ export const mockDataMedicalRecords = [
     age: 16,
     presciptionname: "Prescription",
     medicalreport: "Cell Report",
-    status: "view",
+    status: "Print",
+    sex: "Female",
   },
   {
     id: 5,
@@ -1407,7 +1420,8 @@ export const mockDataMedicalRecords = [
     age: 31,
     presciptionname: "Prescription",
     medicalreport: "Chest Report",
-    status: "view",
+    status: "Print",
+    sex: "Male",
   },
   {
     id: 6,
@@ -1416,7 +1430,8 @@ export const mockDataMedicalRecords = [
     age: 150,
     presciptionname: "Prescription",
     medicalreport: "Blood Report",
-    status: "view",
+    status: "Print",
+    sex: "Male",
   },
   {
     id: 7,
@@ -1425,7 +1440,8 @@ export const mockDataMedicalRecords = [
     age: 44,
     presciptionname: "Prescription",
     medicalreport: "Blood Report",
-    status: "view",
+    status: "Print",
+    sex: "Male",
   },
   {
     id: 8,
@@ -1434,7 +1450,8 @@ export const mockDataMedicalRecords = [
     age: 36,
     presciptionname: "Prescription",
     medicalreport: "Blood Report",
-    status: "view",
+    status: "Print",
+    sex: "Female",
   },
   {
     id: 9,
@@ -1443,7 +1460,8 @@ export const mockDataMedicalRecords = [
     age: 65,
     presciptionname: "Prescription",
     medicalreport: "Blood Report",
-    status: "view",
+    status: "Print",
+    sex: "Female",
   },
   {
     id: 10,
@@ -1451,7 +1469,8 @@ export const mockDataMedicalRecords = [
     age: 42,
     presciptionname: "Prescription",
     medicalreport: "Blood Report",
-    status: "view",
+    status: "Print",
+    sex: "Male",
   },
   {
     id: 11,
@@ -1459,7 +1478,8 @@ export const mockDataMedicalRecords = [
     age: 11,
     presciptionname: "Prescription",
     medicalreport: "Blood Report",
-    status: "view",
+    status: "Print",
+    sex: "Female",
   },
 ];
 
