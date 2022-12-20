@@ -13,6 +13,35 @@ const Team = () => {
   const columns = [
     { field: "id", headerName: "ID" },
     {
+      field: "sex",
+      headerName: "Profile Picture",
+      renderCell: ({ row: { sex } }) => {
+        return (
+          <Box
+            width="90%"
+            m="0 auto"
+            p="10px"
+            display="flex"
+            justifyContent="center"
+            borderRadius="50%"
+          >
+            {sex === "Female" && (
+              <img
+                style={{ width: "50px", height: "50px", borderRadius: "50%" }}
+                src="https://e7.pngegg.com/pngimages/674/524/png-clipart-professional-computer-icons-avatar-job-avatar-heroes-computer-thumbnail.png"
+              ></img>
+            )}
+            {sex === "Male" && (
+              <img
+                style={{ width: "50px", height: "50px", borderRadius: "50%" }}
+                src="https://e7.pngegg.com/pngimages/799/987/png-clipart-computer-icons-avatar-icon-design-avatar-heroes-computer-wallpaper-thumbnail.png"
+              ></img>
+            )}
+          </Box>
+        );
+      },
+    },
+    {
       field: "name",
       headerName: "Name",
       flex: 1,
@@ -94,16 +123,20 @@ const Team = () => {
           "& .MuiDataGrid-virtualScroller": {
             backgroundColor: colors.primary[400],
           },
+        
           "& .MuiDataGrid-footerContainer": {
             borderTop: "none",
+            display: "none",
+
             backgroundColor: colors.blueAccent[700],
           },
-          "& .MuiCheckbox-root": {
-            color: `${colors.greenAccent[200]} !important`,
+
+          "& .css-1j9kmqg-MuiDataGrid-toolbarContainer": {
+            display: "none",
           },
         }}
       >
-        <DataGrid checkboxSelection rows={mockDataAppoint} columns={columns} />
+        <DataGrid rows={mockDataAppoint} columns={columns} />
       </Box>
     </Box>
   );

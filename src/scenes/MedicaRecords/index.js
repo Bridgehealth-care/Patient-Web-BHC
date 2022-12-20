@@ -12,13 +12,43 @@ const MedicalRecord = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const columns = [
-    { field: "id", headerName: "ID" },
+    { field: "id", headerName: "ID", flex: 0.6 },
+    {
+      field: "sex",
+      headerName: "Profile Picture",
+      renderCell: ({ row: { sex } }) => {
+        return (
+          <Box
+            width="90%"
+            m="0 auto"
+            p="10px"
+            display="flex"
+            justifyContent="center"
+            borderRadius="50%"
+          >
+            {sex === "Female" && (
+              <img
+                style={{ width: "50px", height: "50px", borderRadius: "50%" }}
+                src="https://e7.pngegg.com/pngimages/674/524/png-clipart-professional-computer-icons-avatar-job-avatar-heroes-computer-thumbnail.png"
+              ></img>
+            )}
+            {sex === "Male" && (
+              <img
+                style={{ width: "50px", height: "50px", borderRadius: "50%" }}
+                src="https://e7.pngegg.com/pngimages/799/987/png-clipart-computer-icons-avatar-icon-design-avatar-heroes-computer-wallpaper-thumbnail.png"
+              ></img>
+            )}
+          </Box>
+        );
+      },
+    },
     {
       field: "name",
       headerName: "Doctor Name",
       flex: 1,
       cellClassName: "name-column--cell",
     },
+
     {
       field: "age",
       headerName: "Age",
@@ -29,13 +59,14 @@ const MedicalRecord = () => {
     {
       field: "presciptionname",
       headerName: "Presciption Name",
-      flex: 1.1,
+      flex: 1,
     },
     {
       field: "medicalreport",
       headerName: "Medical Report",
-      flex: 1.2,
+      flex: 1,
     },
+
     {
       field: "status",
       headerName: "Status",
@@ -50,7 +81,7 @@ const MedicalRecord = () => {
             justifyContent="center"
             borderRadius="4px"
             backgroundColor={
-              status === "view"
+              status === "Print"
                 ? colors.greenAccent[600]
                 : status === "notAttended"
                 ? colors.redAccent[700]
@@ -96,13 +127,20 @@ const MedicalRecord = () => {
             borderTop: "none",
             backgroundColor: colors.blueAccent[700],
           },
-          "& .MuiCheckbox-root": {
-            color: `${colors.greenAccent[200]} !important`,
+          "& .MuiDataGrid-footerContainer": {
+            borderTop: "none",
+            display: "none",
+
+            backgroundColor: colors.blueAccent[700],
+          },
+        
+          "& .css-1j9kmqg-MuiDataGrid-toolbarContainer": {
+            display: "none",
           },
         }}
       >
         <DataGrid
-          checkboxSelection
+         
           rows={mockDataMedicalRecords}
           columns={columns}
         />
