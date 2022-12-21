@@ -32,17 +32,21 @@ function App() {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <div className="app">
+        <Routes>
+          
+        </Routes>
           <Navbar />
           {/* <Sidebar /> */}
           <main className="content">
             <Topbar />
             <Routes>
               {/* <Route path="/" exact element={<Dashboard />} /> */}
-              <Route path="/login" exact element={<Login/>} />
+              <Route path="/login" exact element={<Login />} />
+              <Route path="/signup" exact element={<Signup />} />
               <Route path="/" exact element={<Dashboard />} />
               {/* <Route path="/" element={<Dash />} /> */}
               <Route path="/insurence" element={<Insurence />} />
-              <Route path="/signup" exact element={<Signup/>} />
+
               <Route path="/appoint" element={<Appointment />} />
               <Route path="/patientlist" element={<Contacts />} />
               <Route path="/infomet" element={<MeetingInfo />} />
