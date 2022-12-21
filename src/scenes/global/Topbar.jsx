@@ -45,7 +45,10 @@ const Topbar = () => {
         <IconButton>
           {/* <PersonOutlinedIcon /> */}
           {/* <Rahul /> */}
-          <img className="h-7 w-7 rounded-full" src={Rahul} alt="" />
+          <div className="bg-blue-700 flex flex-row rounded-2xl space-x-1">
+            <span className="text-lg">Rahul</span>
+            <img className="h-7 w-7 rounded-full" src={Rahul} alt="" />
+          </div>
         </IconButton>
       </Box>
     </Box>
