@@ -20,6 +20,7 @@ import TDMsection from "./scenes/TDM";
 import Doctor from "./scenes/Doctor";
 import Payment from "./scenes/Payment";
 import Symptoms from "./scenes/symptopms";
+import Signup from "./scenes/Signup";
 function App() {
   const [theme, colorMode] = useMode();
   return (
@@ -34,6 +35,7 @@ function App() {
             <Routes>
               <Route path="/" exact element={<Dashboard />} />
               <Route path="/login" exact element={<Login/>} />
+              <Route path="/signup" exact element={<Signup/>} />
               <Route path="/appoint" element={<Appointment />} />
               <Route path="/patientlist" element={<Contacts />} />
               <Route path="/infomet" element={<MeetingInfo />} />
