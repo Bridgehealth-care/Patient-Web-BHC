@@ -18,6 +18,8 @@ import Pie3 from "../charts/Pie3";
 import { AiFillAlert, AiFillStar } from "react-icons/ai";
 import { BsFillCalendarCheckFill } from "react-icons/bs";
 import { MdOutlineRateReview } from "react-icons/md";
+import Clinic from "../LiveClinic/Clinic";
+import Table from './Table';
 
 const Dashboard = () => {
   const theme = useTheme();
@@ -56,11 +58,11 @@ const Dashboard = () => {
           {/* ROW 1 */}
           <Box
             gridColumn="span 3"
-            backgroundColor={colors.primary[400]}
+            // backgroundColor={colors.primary[400]}
             display="flex"
             alignItems="center"
             justifyContent="center"
-            className="rounded-2xl"
+            className="rounded-2xl bg-blue-800 hover:bg-blue-900"
           >
             <StatBox
               title="12,361"
@@ -76,11 +78,11 @@ const Dashboard = () => {
           </Box>
           <Box
             gridColumn="span 3"
-            backgroundColor={colors.primary[400]}
+            // backgroundColor={colors.primary[400]}
             display="flex"
             alignItems="center"
             justifyContent="center"
-            className="rounded-2xl"
+            className="rounded-2xl bg-blue-800 hover:bg-blue-900"
 
           >
             <StatBox
@@ -97,11 +99,11 @@ const Dashboard = () => {
           </Box>
           <Box
             gridColumn="span 3"
-            backgroundColor={colors.primary[400]}
+            // backgroundColor={colors.primary[400]}
             display="flex"
             alignItems="center"
             justifyContent="center"
-            className="rounded-2xl"
+            className="rounded-2xl bg-blue-800 hover:bg-blue-900"
 
           >
             <StatBox
@@ -118,11 +120,11 @@ const Dashboard = () => {
           </Box>
           <Box
             gridColumn="span 3"
-            backgroundColor={colors.primary[400]}
+            // backgroundColor={colors.primary[400]}
             display="flex"
             alignItems="center"
             justifyContent="center"
-            className="rounded-2xl"
+            className="rounded-2xl bg-blue-800 hover:bg-blue-900"
 
           >
             <StatBox
@@ -182,9 +184,9 @@ const Dashboard = () => {
           <Box
             gridColumn="span 9"
             gridRow="span 2"
-            backgroundColor={colors.primary[400]}
+            // backgroundColor={colors.primary[400]}
             overflow="auto"
-            className="w-auto rounded-2xl h-[400px]"
+            className="w-auto rounded-2xl h-[400px] bg-blue-800 hover:bg-blue-900"
           >
             <Box
               display="flex"
@@ -202,7 +204,7 @@ const Dashboard = () => {
                 Recent Appointments
               </Typography>
             </Box>
-            {mockRAppointments.map((appointment, i) => (
+            {/* {mockRAppointments.map((appointment, i) => (
               <Box
                 key={`${appointment.txId}-${i}`}
                 display="flex"
@@ -232,7 +234,8 @@ const Dashboard = () => {
                   {appointment.cost}
                 </Box>
               </Box>
-            ))}
+            ))} */}
+            <Table/>
           </Box>
 
           {/* ROW 3 */}
@@ -264,8 +267,7 @@ const Dashboard = () => {
         </Box> */}
           {/* <div>
         </div> */}
-          <div className="ml-[30px] mt-4 w-100% bg-blue-200 rounded-xl items-center h-auto">
-            {/* <h2 className="text-black">Total Consult</h2> */}
+          {/* <div className="ml-[30px] mt-4 w-100% bg-blue-800 rounded-xl items-center h-auto">
             <div className=" p-4 flex flex-row space-x-[150px]">
               <p className="text-blue-500 text-2xl">Total Consulted</p>
               <p className="text-2xl text-blue-500">2123</p>
@@ -276,7 +278,6 @@ const Dashboard = () => {
             <div className="mt-[-100px]">
               <span className="text-2xl text-blue-500">Total Consulted by</span>
               <div className="space-x-[200px]">
-                {/* <AiFillAlert /> */}
                 <span className="text-xl text-red-400 flex flex-col items-left">
                   <AiFillAlert />
                   Urgent 399
@@ -286,37 +287,40 @@ const Dashboard = () => {
                 </span>
               </div>
             </div>
-          </div>
+          </div> */}
+          <Box className="ml-10 w-8 ">
+            <Clinic />
+          </Box>
         </Box>
       </Box>
 
-      <div className="flex flex-row mt-[120px] space-x-[150px]">
-        <div className="flex flex-col p-3 bg-blue-200 items-center rounded-xl w-[600px] h-auto">
-          <span className="text-xl text-blue-400">
+      <div className="flex flex-row mt-[120px] space-x-[138px]">
+        <div className="flex flex-col p-3 bg-blue-800 items-center rounded-xl w-[600px] h-auto">
+          <span className="text-xl text-white">
             Total Reputiaon and Reivew
           </span>
           <Pie3 />
           <div className="flex flex-row mt-[-50px] space-x-[150px]">
-            <span className="text-xl text-slate-700">
+            <span className="text-xl text-white">
               Reputiaons
               <br />
               <div className="flex flex-row">
                 <AiFillStar />
-                <span className="text-xl text-slate-700">2321</span>
+                <span className="text-xl text-white">2321</span>
               </div>
             </span>
-            <span className="text-xl text-blue-600">
+            <span className="text-xl text-white">
               Review
               <br />
               <div className="flex flex-row">
                 <MdOutlineRateReview />
-                <span className="text-xl text-blue-600">4.8</span>
+                <span className="text-xl text-white">4.8</span>
               </div>
             </span>
           </div>
         </div>
-        <div className="flex flex-col p-3 items-center bg-blue-200 rounded-xl w-[600px] h-auto">
-          <span className="text-xl text-center text-blue-400">Reports</span>
+        <div className="flex flex-col p-3 items-center bg-blue-800 rounded-xl w-[600px] h-auto">
+          <span className="text-xl text-center text-white">Reports</span>
           <br />
           <Line2 />
         </div>

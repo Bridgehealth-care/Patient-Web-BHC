@@ -13,7 +13,7 @@ const data = [
 
 const Pie3 = () => {
   return (
-    <div className="bg-blue-200" width="100%" height="100%">
+    <div className="bg-blue-800" width="100%" height="100%">
       <PieChart width={300} height={300}>
         <Pie
           dataKey="value"
