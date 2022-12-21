@@ -1,12 +1,13 @@
 import { Box, Typography, useTheme } from "@mui/material";
 import { DataGrid } from "@mui/x-data-grid";
 import { tokens } from "../../theme";
-import { mockDataMedicalRecords } from "../../data/mockData";
+import { mockDataMedicalRecordsHealthReport } from "../../data/mockData";
 import VerifiedIcon from "@mui/icons-material/Verified";
 import PendingActionsIcon from "@mui/icons-material/PendingActions";
 import DoNotDisturbAltIcon from "@mui/icons-material/DoNotDisturbAlt";
 import Header from "../../components/Header";
 import PrintIcon from "@mui/icons-material/Print";
+import ScreenShareIcon from "@mui/icons-material/ScreenShare";
 
 const MedicalRecord = () => {
   const theme = useTheme();
@@ -43,27 +44,30 @@ const MedicalRecord = () => {
       },
     },
     {
-      field: "name",
+      field: "dcotorName",
       headerName: "Doctor Name",
       flex: 1,
       cellClassName: "name-column--cell",
     },
 
     {
-      field: "age",
-      headerName: "Age",
-      type: "number",
-      headerAlign: "left",
-      align: "left",
-    },
-    {
-      field: "presciptionname",
-      headerName: "Presciption Name",
+      field: "doctorid",
+      headerName: "Doctor Id",
       flex: 1,
     },
     {
       field: "medicalreport",
       headerName: "Medical Report",
+      flex: 1,
+    },
+    {
+      field: "time",
+      headerName: "Time",
+      flex: 1,
+    },
+    {
+      field: "date",
+      headerName: "Date",
       flex: 1,
     },
 
@@ -96,6 +100,36 @@ const MedicalRecord = () => {
             </Typography>
           </Box>
         );
+          }
+      },
+    
+      {
+      field: "share",
+      headerName: "Share",
+      flex: 1,
+      renderCell: ({ row: { share } }) => {
+        return (
+          <Box
+            width="80%"
+            m="0 auto"
+            p="5px"
+            display="flex"
+            justifyContent="center"
+            borderRadius="4px"
+            backgroundColor={
+              share === "Print"
+                ? colors.greenAccent[600]
+                : share === "notAttended"
+                ? colors.redAccent[700]
+                : colors.yellowAccent[700]
+            }
+          >
+            <ScreenShareIcon/>
+            <Typography color={colors.grey[100]} sx={{ ml: "5px" }}>
+              {share}
+            </Typography>
+          </Box>
+        );
       },
     },
   ];
@@ -103,6 +137,51 @@ const MedicalRecord = () => {
   return (
     <Box m="20px">
       <Header title="Medical Records" subtitle="All your Medical Records..." />
+      <Box m="20px" display="flex" justifyContent="spaceBetween">
+        <Box
+          backgroundColor="green"
+          m="0 auto"
+          p="5px"
+          display="flex"
+          justifyContent="center"
+          borderRadius="6px"
+          width="250px"
+          sx={{ cursor: "pointer" }}
+          height="40px"
+        >
+          Health Report
+        </Box>
+        <Box
+          backgroundColor="green"
+          width="250px"
+          height="40px"
+          m="0 auto"
+          p="5px"
+          display="flex"
+          justifyContent="center"
+          sx={{ cursor: "pointer" }}
+          borderRadius="6px"
+        >
+          <Typography color={colors.grey[100]} sx={{ ml: "5px" }}>
+            Lab Test
+          </Typography>
+        </Box>
+        <Box
+          m="0 auto"
+          p="5px"
+          width="250px"
+          height="40px"
+          backgroundColor="green"
+          display="flex"
+          sx={{ cursor: "pointer" }}
+          justifyContent="center"
+          borderRadius="6px"
+        >
+          <Typography color={colors.grey[100]} sx={{ ml: "5px" }}>
+            Receipts
+          </Typography>
+        </Box>
+      </Box>
       <Box
         m="50px 0 0 0"
         height="75vh"
@@ -133,17 +212,13 @@ const MedicalRecord = () => {
 
             backgroundColor: colors.blueAccent[700],
           },
-        
+
           "& .css-1j9kmqg-MuiDataGrid-toolbarContainer": {
             display: "none",
           },
         }}
       >
-        <DataGrid
-         
-          rows={mockDataMedicalRecords}
-          columns={columns}
-        />
+        <DataGrid rows={mockDataMedicalRecordsHealthReport} columns={columns} />
       </Box>
     </Box>
   );
