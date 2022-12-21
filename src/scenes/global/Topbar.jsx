@@ -8,6 +8,7 @@ import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined
 import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
 import SearchIcon from "@mui/icons-material/Search";
+import Rahul from "../../data/rahul.png";
 
 const Topbar = () => {
   const theme = useTheme();
@@ -16,7 +17,7 @@ const Topbar = () => {
 
   return (
     <Box display="flex" justifyContent="space-around">
-      <Box
+      {/* <Box
         display="flex"
         backgroundColor={colors.primary[400]}
         borderRadius="3px"
@@ -25,9 +26,9 @@ const Topbar = () => {
         <IconButton type="button" sx={{ p: 1 }}>
           <SearchIcon />
         </IconButton>
-      </Box>
+      </Box> */}
 
-      <Box display="flex">
+      <Box display="flex" className="absolute top-0 right-0 w-[200px] h-[50px]">
         <IconButton onClick={colorMode.toggleColorMode}>
           {theme.palette.mode === "dark" ? (
             <DarkModeOutlinedIcon />
@@ -42,7 +43,9 @@ const Topbar = () => {
           <SettingsOutlinedIcon />
         </IconButton>
         <IconButton>
-          <PersonOutlinedIcon />
+          {/* <PersonOutlinedIcon /> */}
+          {/* <Rahul /> */}
+          <img className="h-7 w-7 rounded-full" src={Rahul} alt="" />
         </IconButton>
       </Box>
     </Box>

@@ -8,6 +8,7 @@ import CalendarTodayOutlinedIcon from "@mui/icons-material/CalendarTodayOutlined
 import AirplayIcon from "@mui/icons-material/Airplay";
 import TimelineOutlinedIcon from "@mui/icons-material/TimelineOutlined";
 import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
+import { GrMoney } from "react-icons/gr";
 
 export const SidebarData = [
   {
@@ -38,6 +39,12 @@ export const SidebarData = [
     title: "Profile Update",
     path: "/profileupdate",
     icon: <PersonOutlinedIcon />,
+    cName: "nav-text",
+  },
+  {
+    title: "Health Insurence",
+    path: "/insurence",
+    icon: <GrMoney />,
     cName: "nav-text",
   },
   {
