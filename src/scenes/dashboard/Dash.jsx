@@ -294,7 +294,7 @@ const Dashboard = () => {
         </Box>
       </Box>
 
-      <div className="flex flex-row mt-[120px] space-x-[138px]">
+      <div className="ml-4 flex flex-row mt-[120px] space-x-[138px]">
         <div className="flex flex-col p-3 bg-blue-800 items-center rounded-xl w-[600px] h-auto">
           <span className="text-xl text-white">
             Total Reputiaon and Reivew
