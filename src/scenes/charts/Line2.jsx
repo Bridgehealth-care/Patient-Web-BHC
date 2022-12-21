@@ -79,7 +79,8 @@ const data = [
 const Line2 = () => {
   return (
     // <div className="bg-white w-[500px] ">
-    <div className="bg-blue-200 w-100% ">
+    // <div className="bg-blue-200 w-100% ">
+    <div className="bg-blue-800 w-100% ">
         {/* <ResponsiveContainer width="100%" height="100%"> */}
         <LineChart
           width={500}
@@ -97,8 +98,8 @@ const Line2 = () => {
           <YAxis />
           <Tooltip />
           <Legend />
-          <Line type="monotone" dataKey="Month" stroke="#8884d8" activeDot={{ r: 8 }} />
-          <Line type="monotone" dataKey="Consult" stroke="#82ca9d" />
+          <Line type="monotone" dataKey="Month" stroke="black" activeDot={{ r: 8 }} />
+          <Line type="monotone" dataKey="Consult" stroke="black" />
         </LineChart>
       {/* </ResponsiveContainer> */}
     </div>
