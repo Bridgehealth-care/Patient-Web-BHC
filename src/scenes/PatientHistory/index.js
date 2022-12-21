@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react'
 import Header from '../../components/Header';
 import { Box, Button, Typography, useTheme } from "@mui/material";
@@ -10,6 +9,7 @@ import DoNotDisturbAltIcon from "@mui/icons-material/DoNotDisturbAlt";
 import PrintIcon from "@mui/icons-material/Print";
 import LineChart from '../../components/LineChart';
 import Linetempchart from '../../components/LineChartTemp';
+import PieChart from '../../components/PieChart';
 
 const PatientHistory = () => {
    const [active,setActive]=useState("one");
@@ -147,7 +147,7 @@ const PatientHistory = () => {
               {active === "three" && <LineChart />}
               {active === "four" && <LineChart />}
               {active === "five" && <LineChart />}
-              {active === "six" && <LineChart />}
+              {active === "six" && <PieChart />}
            
           </Box>
         </Box>

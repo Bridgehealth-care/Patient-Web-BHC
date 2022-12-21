@@ -33,7 +33,7 @@ const Clinic = () => {
           </Select>
         </FormControl>
         <div className="mt-4 space-y-3 p-2 flex flex-col items-center">
-          <span className="bg-blue-500 animate-pulse hover:bg-blue-900 rounded-xl text-center w-[100px] h-auto">1</span>
+          <span className="bg-blue-500 animate-ping decoration-red-500 hover:bg-red-500 rounded-xl text-center w-[100px] h-auto">1</span>
           <span className="bg-blue-500 hover:bg-blue-900 rounded-xl text-center w-[100px] h-auto">2</span>
           <span className="bg-blue-500 hover:bg-blue-900 rounded-xl text-center w-[100px] h-auto">3</span>
           <span className="bg-blue-500 hover:bg-blue-900 rounded-xl text-center w-[100px] h-auto">4</span>
