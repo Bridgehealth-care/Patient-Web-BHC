@@ -4,7 +4,7 @@ const Update2 = () => {
   return (
     <form action="#" method="POST">
       {/* <div className="overflow-hidden  shadow sm:rounded-md"> */}
-      <div className="bg-blue-800 w-auto m-4 rounded-2xl mt-10 px-4 py-5 sm:p-6">
+      <div className="bg-slate-100 w-auto m-4 rounded-2xl mt-10 px-4 py-5 sm:p-6">
         <div>
           <label className="block text-xl font-medium text-white">
             Photo

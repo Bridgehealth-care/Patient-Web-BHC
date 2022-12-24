@@ -64,7 +64,7 @@ const Dashboard = () => {
             display="flex"
             alignItems="center"
             justifyContent="center"
-            className="rounded-2xl bg-blue-800 hover:bg-blue-900"
+            className="rounded-2xl bg-[#3767B1]"
           >
             <StatBox
               title="12,361"
@@ -73,7 +73,7 @@ const Dashboard = () => {
               increase="+3"
               icon={
                 <AccessibleIcon
-                  sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
+                  sx={{ color: "#fff", fontSize: "26px" }}
                 />
               }
             />
@@ -84,7 +84,7 @@ const Dashboard = () => {
             display="flex"
             alignItems="center"
             justifyContent="center"
-            className="rounded-2xl bg-blue-800 hover:bg-blue-900"
+            className="rounded-2xl bg-[#3767B1]"
           >
             <StatBox
               title="25"
@@ -93,7 +93,7 @@ const Dashboard = () => {
               increase="+21%"
               icon={
                 <EventIcon
-                  sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
+                  sx={{ color: "#fff", fontSize: "26px" }}
                 />
               }
             />
@@ -104,16 +104,16 @@ const Dashboard = () => {
             display="flex"
             alignItems="center"
             justifyContent="center"
-            className="rounded-2xl bg-blue-800 hover:bg-blue-900"
+            className="rounded-2xl bg-[#3767B1]"
           >
             <StatBox
               title="7.00 hours"
-              subtitle="TDM Time"
+              subtitle="Book Appoint"
               progress="0.50"
               increase="+21%"
               icon={
                 <AccessTimeIcon
-                  sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
+                  sx={{ color: "#fff", fontSize: "26px" }}
                 />
               }
             />
@@ -124,7 +124,7 @@ const Dashboard = () => {
             display="flex"
             alignItems="center"
             justifyContent="center"
-            className="rounded-2xl bg-blue-800 hover:bg-blue-900"
+            className="rounded-2xl bg-[#3767B1]"
           >
 
             <StatBox
@@ -134,7 +134,7 @@ const Dashboard = () => {
               increase="+33%"
               icon={
                 <PaidIcon
-                  sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
+                  sx={{ color: "#fff", fontSize: "26px" }}
                 />
               }
             />
@@ -189,7 +189,7 @@ const Dashboard = () => {
             gridRow="span 2"
             // backgroundColor={colors.primary[400]}
             overflow="auto"
-            className="w-auto rounded-2xl h-[400px] bg-blue-800 hover:bg-blue-900"
+            className="w-auto rounded-2xl h-[400px] bg-[#3767B1]"
           >
             <Box
               display="flex"
@@ -200,7 +200,7 @@ const Dashboard = () => {
               p="15px"
             >
               <Typography
-                color={colors.grey[100]}
+                color={"#fff"}
                 variant="h5"
                 fontWeight="600"
               >
@@ -270,7 +270,7 @@ const Dashboard = () => {
         </Box> */}
           {/* <div>
         </div> */}
-          {/* <div className="ml-[30px] mt-4 w-100% bg-blue-800 rounded-xl items-center h-auto">
+          {/* <div className="ml-[30px] mt-4 w-100% bg-[#3767B1]rounded-xl items-center h-auto">
             <div className=" p-4 flex flex-row space-x-[150px]">
               <p className="text-blue-500 text-2xl">Total Consulted</p>
               <p className="text-2xl text-blue-500">2123</p>
@@ -297,8 +297,8 @@ const Dashboard = () => {
         </Box>
       </Box>
 
-      <div className="ml-4 flex flex-row mt-[120px] space-x-[138px]">
-        <div className="flex flex-col p-3 bg-blue-800 items-center rounded-xl w-[600px] h-auto">
+      {/* <div className="ml-4 flex flex-row mt-[120px] space-x-[138px]">
+        <div className="flex flex-col p-3 bg-[#3767B1] items-center rounded-xl w-[600px] h-auto">
           <span className="text-xl text-white">Total Reputiaon and Reivew</span>
           <Pie3 />
           <div className="flex flex-row mt-[-50px] space-x-[150px]">
@@ -320,12 +320,12 @@ const Dashboard = () => {
             </span>
           </div>
         </div>
-        <div className="flex flex-col p-3 items-center bg-blue-800 rounded-xl w-[600px] h-auto">
+        <div className="flex flex-col p-3 items-center bg-[#3767B1] rounded-xl w-[600px] h-auto">
           <span className="text-xl text-center text-white">Reports</span>
           <br />
           <Line2 />
         </div>
-      </div>
+      </div> */}
       {/* <div className="ml-10 p-4 mt-[100px] bg-white w-[550px]">
         <p className="text-2xl ml-[230px] text-blue-500">Reports</p>
          <Pie3 /> 

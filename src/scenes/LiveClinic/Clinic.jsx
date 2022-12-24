@@ -10,13 +10,13 @@ const Clinic = () => {
     setSpecialization(event.target.value);
   };
   return (
-    <div className="ml-10 bg-blue-800 rounded-2xl w-[200px] h-[400px]">
+    <div className="ml-10 bg-[#3767B1] rounded-2xl w-[200px] h-[400px]">
       <div className="items-center flex flex-col mt-2 p-4">
         <span className="text-2xl font-semibold text-white mb-2">Live Clinic</span>
         {/* <span>1</span>
         <span>2</span> */}
         <FormControl fullWidth>
-          <InputLabel id="demo-simple-select-label" className="text-lg">
+          <InputLabel id="demo-simple-select-label" className="text-lg text-white">
             TDM Name
           </InputLabel>
           <Select
@@ -33,14 +33,14 @@ const Clinic = () => {
           </Select>
         </FormControl>
         <div className="mt-4 space-y-3 p-2 flex flex-col items-center">
-          <span className="bg-blue-500 animate-ping decoration-red-500 hover:bg-red-500 rounded-xl text-center w-[100px] h-auto">1</span>
-          <span className="bg-blue-500 hover:bg-blue-900 rounded-xl text-center w-[100px] h-auto">2</span>
-          <span className="bg-blue-500 hover:bg-blue-900 rounded-xl text-center w-[100px] h-auto">3</span>
-          <span className="bg-blue-500 hover:bg-blue-900 rounded-xl text-center w-[100px] h-auto">4</span>
-          <span className="bg-blue-500 hover:bg-blue-900 rounded-xl text-center w-[100px] h-auto">5</span>
-          <span className="bg-blue-500 hover:bg-blue-900 rounded-xl text-center w-[100px] h-auto">6</span>
-          <span className="bg-blue-500 hover:bg-blue-900 rounded-xl text-center w-[100px] h-auto">7</span>
-          <span className="bg-blue-500 hover:bg-blue-900 rounded-xl text-center w-[100px] h-auto">8</span>
+          <span className="bg-white animate-ping decoration-red-500 hover:bg-red-500 rounded-xl text-center w-[100px] h-auto">1</span>
+          <span className="bg-white hover:bg-blue-900 rounded-xl text-center w-[100px] h-auto">2</span>
+          <span className="bg-white hover:bg-blue-900 rounded-xl text-center w-[100px] h-auto">3</span>
+          <span className="bg-white hover:bg-blue-900 rounded-xl text-center w-[100px] h-auto">4</span>
+          <span className="bg-white hover:bg-blue-900 rounded-xl text-center w-[100px] h-auto">5</span>
+          <span className="bg-white hover:bg-blue-900 rounded-xl text-center w-[100px] h-auto">6</span>
+          <span className="bg-white hover:bg-blue-900 rounded-xl text-center w-[100px] h-auto">7</span>
+          <span className="bg-white hover:bg-blue-900 rounded-xl text-center w-[100px] h-auto">8</span>
         </div>
       </div>
     </div>
