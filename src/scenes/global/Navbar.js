@@ -17,16 +17,18 @@ function Navbar() {
     setSidebar(!sidebar);
   };
   return (
-    <Box backgroundColor={colors.primary[400]}>
-      <IconContext.Provider value={{ color: "primary" }}>
-        <Box className="navbar" backgroundColor={colors.primary[400]}>
+    // <Box backgroundColor={colors.primary[400]}>
+    <Box className="bg-[#3767B1]">
+      <IconContext.Provider value={{ color: "#3767B1" }}>
+        {/* <Box className="navbar" backgroundColor={colors.primary[400]}> */}
+        <Box className="navbar bg-[#3767B1]">
           <Link to="#" className="menu-bars">
             <MenuIcon onClick={showSidebar} />
           </Link>
         </Box>
         <Box
           className={sidebar ? "nav-menu active" : "nav-menu"}
-          backgroundColor={colors.primary[400]}
+          backgroundColor={"#3767B1"}
         >
           <ul className="nav-menu-items" onClick={showSidebar}>
             <li className="navbar-toggle">

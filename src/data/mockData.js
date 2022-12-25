@@ -1,5 +1,39 @@
 import { tokens } from "../theme";
 
+export const PieData= [
+  {
+    "id": "Glucose",
+    "label": "elixir",
+    "value": 252,
+    "color": "hsl(344, 70%, 50%)"
+  },
+  {
+    "id": "Fasting",
+    "label": "erlang",
+    "value": 296,
+    "color": "hsl(151, 70%, 50%)"
+  },
+  {
+    "id": "After Dinner",
+    "label": "css",
+    "value": 538,
+    "color": "hsl(285, 70%, 50%)"
+  },
+  {
+    "id": "2-3 hours after",
+    "label": "haskell",
+    "value": 119,
+    "color": "hsl(256, 70%, 50%)"
+  },
+  {
+    "id": "Empty stomach",
+    "label": "rust",
+    "value": 592,
+    "color": "hsl(338, 70%, 50%)"
+  }
+]
+
+
 export const mockDataAppoint = [
   {
     id: 1,

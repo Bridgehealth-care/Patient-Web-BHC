@@ -131,7 +131,7 @@ const rows = [
 export default function CollapsibleTable() {
   return (
     <TableContainer component={Paper}>
-      <Table aria-label="collapsible table" className='bg-blue-800 hover:bg-blue-900 text-lg text-black font-semibold'>
+      <Table aria-label="collapsible table" className='bg-[#fff] text-lg text-black font-semibold'>
         <TableHead>
           <TableRow>
             <TableCell />

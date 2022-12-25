@@ -1,4 +1,4 @@
-import { Box, Button, IconButton, Typography, useTheme } from "@mui/material";
+import { Badge, Box, Button, IconButton, Typography, useTheme } from "@mui/material";
 import { tokens } from "../../theme";
 import { mockRAppointments } from "../../data/mockData";
 import DownloadOutlinedIcon from "@mui/icons-material/DownloadOutlined";
@@ -15,11 +15,13 @@ import Line2 from "../charts/Line2";
 import Pie3 from "../charts/Pie3";
 // import FaAccessibleIcon from 'react-icons/fa'
 // import FontAwesomeIcon from 'react-fontawesome'
-import { AiFillAlert, AiFillStar } from "react-icons/ai";
+import { AiFillAlert, AiFillStar, AiOutlineClockCircle } from "react-icons/ai";
 import { BsFillCalendarCheckFill } from "react-icons/bs";
 import { MdOutlineRateReview } from "react-icons/md";
 import Clinic from "../LiveClinic/Clinic";
-import Table from './Table';
+import Table from "./Table";
+import AccessTimeIcon from "@mui/icons-material/AccessTime";
+import PaidIcon from "@mui/icons-material/Paid";
 
 const Dashboard = () => {
   const theme = useTheme();
@@ -62,16 +64,16 @@ const Dashboard = () => {
             display="flex"
             alignItems="center"
             justifyContent="center"
-            className="rounded-2xl bg-blue-800 hover:bg-blue-900"
+            className="rounded-2xl bg-[#3767B1]"
           >
             <StatBox
               title="12,361"
-              subtitle="Patient Met"
-              progress="0.75"
-              increase="+14%"
+              subtitle="Doctor Appointment"
+              progress="0.25"
+              increase="+3"
               icon={
                 <AccessibleIcon
-                  sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
+                  sx={{ color: "#fff", fontSize: "26px" }}
                 />
               }
             />
@@ -82,17 +84,16 @@ const Dashboard = () => {
             display="flex"
             alignItems="center"
             justifyContent="center"
-            className="rounded-2xl bg-blue-800 hover:bg-blue-900"
-
+            className="rounded-2xl bg-[#3767B1]"
           >
             <StatBox
-              title="431,225"
-              subtitle="Appointment Done"
+              title="25"
+              subtitle="Medical records"
               progress="0.50"
               increase="+21%"
               icon={
                 <EventIcon
-                  sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
+                  sx={{ color: "#fff", fontSize: "26px" }}
                 />
               }
             />
@@ -103,17 +104,16 @@ const Dashboard = () => {
             display="flex"
             alignItems="center"
             justifyContent="center"
-            className="rounded-2xl bg-blue-800 hover:bg-blue-900"
-
+            className="rounded-2xl bg-[#3767B1]"
           >
             <StatBox
-              title="431,225"
-              subtitle="Appointment Done"
+              title="7.00 hours"
+              subtitle="Book Appoint"
               progress="0.50"
               increase="+21%"
               icon={
-                <EventIcon
-                  sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
+                <AccessTimeIcon
+                  sx={{ color: "#fff", fontSize: "26px" }}
                 />
               }
             />
@@ -124,20 +124,23 @@ const Dashboard = () => {
             display="flex"
             alignItems="center"
             justifyContent="center"
-            className="rounded-2xl bg-blue-800 hover:bg-blue-900"
-
+            className="rounded-2xl bg-[#3767B1]"
           >
+
             <StatBox
-              title="1,325,134"
-              subtitle="TDM Visit"
-              progress="0.80"
-              increase="+43%"
+              title="5,134"
+              subtitle="INR Money"
+              progress="0.18"
+              increase="+33%"
               icon={
-                <HouseIcon
-                  sx={{ color: colors.greenAccent[600], fontSize: "26px" }}
+                <PaidIcon
+                  sx={{ color: "#fff", fontSize: "26px" }}
                 />
               }
             />
+            <Badge className="mt-[120px] font-semibold mr-2 absolute bottom-0 right-0" color="secondary" variant="dot">
+              Active
+            </Badge>
           </Box>
 
           {/* ROW 2 */}
@@ -186,7 +189,7 @@ const Dashboard = () => {
             gridRow="span 2"
             // backgroundColor={colors.primary[400]}
             overflow="auto"
-            className="w-auto rounded-2xl h-[400px] bg-blue-800 hover:bg-blue-900"
+            className="w-auto rounded-2xl h-[400px] bg-[#3767B1]"
           >
             <Box
               display="flex"
@@ -197,7 +200,7 @@ const Dashboard = () => {
               p="15px"
             >
               <Typography
-                color={colors.grey[100]}
+                color={"#fff"}
                 variant="h5"
                 fontWeight="600"
               >
@@ -235,7 +238,7 @@ const Dashboard = () => {
                 </Box>
               </Box>
             ))} */}
-            <Table/>
+            <Table />
           </Box>
 
           {/* ROW 3 */}
@@ -267,7 +270,7 @@ const Dashboard = () => {
         </Box> */}
           {/* <div>
         </div> */}
-          {/* <div className="ml-[30px] mt-4 w-100% bg-blue-800 rounded-xl items-center h-auto">
+          {/* <div className="ml-[30px] mt-4 w-100% bg-[#3767B1]rounded-xl items-center h-auto">
             <div className=" p-4 flex flex-row space-x-[150px]">
               <p className="text-blue-500 text-2xl">Total Consulted</p>
               <p className="text-2xl text-blue-500">2123</p>
@@ -294,11 +297,9 @@ const Dashboard = () => {
         </Box>
       </Box>
 
-      <div className="flex flex-row mt-[120px] space-x-[138px]">
-        <div className="flex flex-col p-3 bg-blue-800 items-center rounded-xl w-[600px] h-auto">
-          <span className="text-xl text-white">
-            Total Reputiaon and Reivew
-          </span>
+      {/* <div className="ml-4 flex flex-row mt-[120px] space-x-[138px]">
+        <div className="flex flex-col p-3 bg-[#3767B1] items-center rounded-xl w-[600px] h-auto">
+          <span className="text-xl text-white">Total Reputiaon and Reivew</span>
           <Pie3 />
           <div className="flex flex-row mt-[-50px] space-x-[150px]">
             <span className="text-xl text-white">
@@ -319,12 +320,12 @@ const Dashboard = () => {
             </span>
           </div>
         </div>
-        <div className="flex flex-col p-3 items-center bg-blue-800 rounded-xl w-[600px] h-auto">
+        <div className="flex flex-col p-3 items-center bg-[#3767B1] rounded-xl w-[600px] h-auto">
           <span className="text-xl text-center text-white">Reports</span>
           <br />
           <Line2 />
         </div>
-      </div>
+      </div> */}
       {/* <div className="ml-10 p-4 mt-[100px] bg-white w-[550px]">
         <p className="text-2xl ml-[230px] text-blue-500">Reports</p>
          <Pie3 /> 

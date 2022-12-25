@@ -46,10 +46,8 @@ function App() {
               {/* <Route path="/" exact element={<Dashboard />} /> */}
               {/* <Route path="/" element={<Dash />} /> */}
               <Route path="/login" exact element={<Login/>} />
-              {/* <Route path="/" exact element={<Dashboard />} /> */}
               <Route path="/" element={<Dash />} />
               <Route path="/insurence" element={<Insurence />} />
-
               <Route path="/appoint" element={<Appointment />} />
               <Route path="/patientlist" element={<Contacts />} />
               <Route path="/infomet" element={<MeetingInfo />} />

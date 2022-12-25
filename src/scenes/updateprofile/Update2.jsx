@@ -4,9 +4,9 @@ const Update2 = () => {
   return (
     <form action="#" method="POST">
       {/* <div className="overflow-hidden  shadow sm:rounded-md"> */}
-      <div className="bg-blue-200 w-auto m-4 rounded-2xl mt-10 px-4 py-5 sm:p-6">
+      <div className="bg-slate-100 w-auto m-4 rounded-2xl mt-10 px-4 py-5 sm:p-6">
         <div>
-          <label className="block text-xl font-medium text-gray-700">
+          <label className="block text-xl font-medium text-white">
             Photo
           </label>
           <div className="mt-1 flex items-center">
@@ -178,7 +178,7 @@ const Update2 = () => {
         </div>
         <button
           type="submit"
-          className="ml-[1200px] text-lg mt-10 inline-flex justify-center rounded-md border border-transparent bg-blue-700 py-2 px-4 text-sm font-medium text-blue-200 shadow-sm hover:bg-blue-900 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+          className="ml-[1200px] text-lg mt-10 inline-flex justify-center rounded-md border border-transparent bg-green-400 py-2 px-4 font-medium text-white shadow-sm hover:bg-green-900 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
         >
           Save
         </button>
