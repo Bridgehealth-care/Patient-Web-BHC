@@ -1,4 +1,39 @@
 import { tokens } from "../theme";
+
+export const PieData= [
+  {
+    "id": "Glucose",
+    "label": "elixir",
+    "value": 252,
+    "color": "hsl(344, 70%, 50%)"
+  },
+  {
+    "id": "Fasting",
+    "label": "erlang",
+    "value": 296,
+    "color": "hsl(151, 70%, 50%)"
+  },
+  {
+    "id": "After Dinner",
+    "label": "css",
+    "value": 538,
+    "color": "hsl(285, 70%, 50%)"
+  },
+  {
+    "id": "2-3 hours after",
+    "label": "haskell",
+    "value": 119,
+    "color": "hsl(256, 70%, 50%)"
+  },
+  {
+    "id": "Empty stomach",
+    "label": "rust",
+    "value": 592,
+    "color": "hsl(338, 70%, 50%)"
+  }
+]
+
+
 export const mockDataAppoint = [
   {
     id: 1,
@@ -7,6 +42,7 @@ export const mockDataAppoint = [
     age: 35,
     phone: "(665)121-5454",
     access: "Done",
+    sex: "Female",
   },
   {
     id: 2,
@@ -15,6 +51,7 @@ export const mockDataAppoint = [
     age: 42,
     phone: "(421)314-2288",
     access: "notAttended",
+    sex: "Male",
   },
   {
     id: 3,
@@ -23,6 +60,7 @@ export const mockDataAppoint = [
     age: 45,
     phone: "(422)982-6739",
     access: "Pending",
+    sex: "Male",
   },
   {
     id: 4,
@@ -31,6 +69,7 @@ export const mockDataAppoint = [
     age: 16,
     phone: "(921)425-6742",
     access: "Done",
+    sex: "Female",
   },
   {
     id: 5,
@@ -39,6 +78,7 @@ export const mockDataAppoint = [
     age: 31,
     phone: "(421)445-1189",
     access: "Pending",
+    sex: "Male",
   },
   {
     id: 6,
@@ -47,6 +87,7 @@ export const mockDataAppoint = [
     age: 150,
     phone: "(232)545-6483",
     access: "notAttended",
+    sex: "Male",
   },
   {
     id: 7,
@@ -55,6 +96,7 @@ export const mockDataAppoint = [
     age: 44,
     phone: "(543)124-0123",
     access: "Pending",
+    sex: "Male",
   },
   {
     id: 8,
@@ -63,6 +105,7 @@ export const mockDataAppoint = [
     age: 36,
     phone: "(222)444-5555",
     access: "Pending",
+    sex: "Male",
   },
   {
     id: 9,
@@ -71,6 +114,7 @@ export const mockDataAppoint = [
     age: 65,
     phone: "(444)555-6239",
     access: "Done",
+    sex: "Male",
   },
 ];
 
@@ -1285,86 +1329,138 @@ export const mockDataDocs = [
   {
     id: 1,
     name: "Jon Snow",
+    time: "10 AM",
+    date: "11 : 02: 2002",
+    fees: "600/-",
+    status: "Done",
     specialization: "Orthopedics",
     age: 35,
-    registrarId: 123512,
+    docid: "DocId001",
+    sex: "Male",
   },
   {
     id: 2,
     name: "Cersei Lannister",
+    time: "6 PM",
+    date: "21 : 05: 2002",
     age: 42,
+    fees: "600/-",
+    status: "Active",
     specialization: "Internal Medicine",
-    registrarId: 123512,
+    docid: "DocId002",
+    sex: "Female",
   },
   {
     id: 3,
     name: "Jaime Lannister",
-
+    time: "4 AM",
+    date: "12 : 02: 2002",
     age: 45,
+    fees: "600/-",
+    status: "Done",
     specialization: "Dermatology",
-    registrarId: 4132513,
+    docid: "DocId011",
+    sex: "Male",
   },
   {
     id: 4,
     name: "Anya Stark",
-
+    time: "5 PM",
+    date: "30 : 03: 2002",
     age: 16,
+    fees: "600/-",
+    status: "Active",
     specialization: "General Surgery",
-    registrarId: 123512,
+    docid: "DocId023",
+    sex: "Female",
   },
   {
     id: 5,
     name: "Daenerys Targaryen",
+    time: "10 PM",
+    date: "22 : 09: 2002",
     specialization: "Pediatrics",
     age: 31,
-    registrarId: 123512,
+    status: "Done",
+    fees: "600/-",
+    docid: "DocId003",
+    sex: "Female",
   },
   {
     id: 6,
     name: "Ever Melisandre",
-
+    time: "11 PM",
+    date: "11 : 02: 2002",
+    fees: "600/-",
     age: 150,
     specialization: "Pediatrics",
-    registrarId: 123512,
+    docid: "DocId004",
+    status: "Active",
+
+    sex: "Male",
   },
   {
     id: 7,
     name: "Ferrara Clifford",
+    time: "2 PM",
+    date: "11 : 02: 2002",
 
     age: 44,
+    fees: "600/-",
+    status: "Done",
 
     specialization: "Pediatrics",
-    registrarId: 123512,
+    docid: "Docid008",
+    sex: "Male",
   },
   {
     id: 8,
     name: "Rossini Frances",
-
+    time: "1 PM",
+    date: "11 : 02: 2002",
+    status: "Active",
     age: 36,
+    fees: "600/-",
     specialization: "General Surgery",
-    registrarId: 512315,
+    docid: "DocId009",
+    sex: "Female",
   },
   {
     id: 9,
     name: "Harvey Roxie",
+    time: "6 PM",
+    date: "11 : 02: 2002",
     age: 65,
+    status: "Done",
+    fees: "600/-",
     specialization: "General Surgery",
-    registrarId: 928397,
+    docid: "DocId010",
+    sex: "Male",
   },
   {
     id: 10,
     name: "Enteri Redack",
+    time: "6 PM",
+    date: "11 : 01: 2002",
     specialization: "Internal Medicine",
     age: 42,
+    fees: "600/-",
+    status: "Active",
+    sex: "Female",
 
-    registrarId: 533215,
+    docid: "DocId011",
   },
   {
     id: 11,
+    time: "6 PM",
+    date: "21 : 03: 2002",
     name: "Steve Goodman",
+    fees: "600/-",
+    status: "Done",
+    sex: "Male",
     age: 11,
     specialization: "Internal Medicine",
-    registrarId: 92197,
+    docid: "DocId089",
   },
 ];
 
@@ -1376,6 +1472,7 @@ export const mockDataMedicalRecords = [
     presciptionname: "Prescription",
     medicalreport: "Blood Report",
     status: "view",
+    sex: "Male",
   },
   {
     id: 2,
@@ -1384,6 +1481,7 @@ export const mockDataMedicalRecords = [
     presciptionname: "Prescription",
     medicalreport: "Blood Report",
     status: "view",
+    sex: "Female",
   },
   {
     id: 3,
@@ -1392,6 +1490,7 @@ export const mockDataMedicalRecords = [
     presciptionname: "Prescription",
     medicalreport: "Heart Report",
     status: "view",
+    sex: "Male",
   },
   {
     id: 4,
@@ -1400,6 +1499,7 @@ export const mockDataMedicalRecords = [
     presciptionname: "Prescription",
     medicalreport: "Cell Report",
     status: "view",
+    sex: "Female",
   },
   {
     id: 5,
@@ -1408,6 +1508,7 @@ export const mockDataMedicalRecords = [
     presciptionname: "Prescription",
     medicalreport: "Chest Report",
     status: "view",
+    sex: "Male",
   },
   {
     id: 6,
@@ -1417,6 +1518,7 @@ export const mockDataMedicalRecords = [
     presciptionname: "Prescription",
     medicalreport: "Blood Report",
     status: "view",
+    sex: "Male",
   },
   {
     id: 7,
@@ -1426,6 +1528,7 @@ export const mockDataMedicalRecords = [
     presciptionname: "Prescription",
     medicalreport: "Blood Report",
     status: "view",
+    sex: "Male",
   },
   {
     id: 8,
@@ -1435,6 +1538,7 @@ export const mockDataMedicalRecords = [
     presciptionname: "Prescription",
     medicalreport: "Blood Report",
     status: "view",
+    sex: "Female",
   },
   {
     id: 9,
@@ -1444,6 +1548,7 @@ export const mockDataMedicalRecords = [
     presciptionname: "Prescription",
     medicalreport: "Blood Report",
     status: "view",
+    sex: "Female",
   },
   {
     id: 10,
@@ -1452,6 +1557,7 @@ export const mockDataMedicalRecords = [
     presciptionname: "Prescription",
     medicalreport: "Blood Report",
     status: "view",
+    sex: "Male",
   },
   {
     id: 11,
@@ -1460,13 +1566,146 @@ export const mockDataMedicalRecords = [
     presciptionname: "Prescription",
     medicalreport: "Blood Report",
     status: "view",
+    sex: "Female",
   },
 ];
+export const mockDataMedicalRecordsHealthReport = [
+  {
+    id: 1,
 
+    dcotorName: "Sam karan",
+    doctorid: "DocID01",
+    time: "5 pm",
+    date: "11/ 01/ 2002",
+    medicalreport: "Blood Report",
+    status: "view",
+    sex: "Male",
+    share: "share",
+  },
+  {
+    id: 2,
 
+    dcotorName: "Sam karan",
+    doctorid: "DocID01",
 
+    time: "5 pm",
+    date: "11/ 01/ 2002",
+    medicalreport: "Blood Report",
+    status: "view",
+    sex: "Female",
+    share: "share",
+  },
+  {
+    id: 3,
 
+    dcotorName: "Sam karan",
+    doctorid: "DocID01",
+    time: "5 pm",
+    date: "11/ 01/ 2002",
+    medicalreport: "Heart Report",
+    status: "view",
+    sex: "Male",
+    share: "share",
+  },
+  {
+    id: 4,
+    time: "5 pm",
+    date: "11/ 01/ 2002",
+    dcotorName: "Sam karan",
+    doctorid: "DocID01",
+    time: "5 pm",
+    date: "11/ 01/ 2002",
+    medicalreport: "Cell Report",
+    status: "view",
+    sex: "Female",
+    share: "share",
+  },
+  {
+    id: 5,
 
+    dcotorName: "Sam karan",
+    doctorid: "DocID01",
+    time: "5 pm",
+    date: "11/ 01/ 2002",
+    medicalreport: "Chest Report",
+    status: "view",
+    sex: "Male",
+    share: "share",
+  },
+  {
+    id: 6,
+    time: "5 pm",
+    date: "11/ 01/ 2002",
+    dcotorName: "Sam karan",
+    doctorid: "DocID01",
+    time: "5 pm",
+    date: "11/ 01/ 2002",
+    medicalreport: "Blood Report",
+    status: "view",
+    share: "share",
+    sex: "Male",
+  },
+  {
+    id: 7,
+
+    dcotorName: "Sam karan",
+    doctorid: "DocID01",
+    time: "5 pm",
+    date: "11/ 01/ 2002",
+    medicalreport: "Blood Report",
+    status: "view",
+    sex: "Male",
+    share: "share",
+  },
+  {
+    id: 8,
+
+    dcotorName: "Sam karan",
+    doctorid: "DocID01",
+    time: "5 pm",
+    date: "11/ 01/ 2002",
+    medicalreport: "Blood Report",
+    status: "view",
+    sex: "Female",
+    share: "share",
+  },
+  {
+    id: 9,
+
+    dcotorName: "Sam karan",
+    doctorid: "DocID01",
+    time: "5 pm",
+    date: "11/ 01/ 2002",
+    medicalreport: "Blood Report",
+    status: "view",
+    sex: "Female",
+    share: "share",
+  },
+  {
+    id: 10,
+
+    dcotorName: "Sam karan",
+    doctorid: "DocID01",
+    time: "5 pm",
+    date: "11/ 01/ 2002",
+    medicalreport: "Blood Report",
+    status: "view",
+    share: "share",
+    sex: "Male",
+  },
+  {
+    id: 11,
+
+    dcotorName: "Sam karan",
+    doctorid: "DocID01",
+    time: "5 pm",
+    date: "11/ 01/ 2002",
+    medicalreport: "Blood Report",
+    status: "view",
+    share: "share",
+    sex: "Female",
+  },
+];
 export const mockTempLineData = [
   // {
   //   id: "Normal Temprature",
@@ -1561,10 +1800,6 @@ export const mockTempLineData = [
     ],
   },
 ];
-
-
-
-
 
 export const mockDataTDM = [
   {
@@ -1666,9 +1901,6 @@ export const mockDataTDM = [
     drcount: "4",
   },
 ];
-
-
-
 
 export const mockDataDoctorAppoint = [
   {

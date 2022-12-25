@@ -7,7 +7,7 @@
 }
 
 .menu-bars {
-  color: #41a692;
+  color: #fff;
   margin-left: 2rem;
   margin-right: 2rem;
   font-size: 2rem;
@@ -61,7 +61,7 @@
 
 .nav-text a:hover {
   color: aliceblue;
-  background-color: #41a692;
+  background-color: #fff;
 }
 
 .nav-menu-items {

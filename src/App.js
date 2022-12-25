@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import Topbar from "./scenes/global/Topbar";
 import Navbar from "./scenes/global/Navbar";
 // import Sidebar from "./scenes/global/Sidebar";
+ import Login from "./scenes/Login";
 import Dashboard from "./scenes/dashboard";
 import Appointment from "./scenes/appoint";
 import Contacts from "./scenes/patients";
@@ -15,10 +16,15 @@ import DoctorList from "./scenes/DoctorList";
 import MedicalRecord from "./scenes/MedicaRecords";
 import PatientHistory from "./scenes/PatientHistory";
 import TDMsection from "./scenes/TDM";
- import AvalaibleTime from "./scenes/AvalaibleTIme";
+import AvalaibleTime from "./scenes/AvalaibleTIme";
 import Doctor from "./scenes/Doctor";
 import Payment from "./scenes/Payment";
 import Symptoms from "./scenes/symptopms";
+import Dash from "./scenes/dashboard/Dash";
+import Profile from "./scenes/updateprofile/Profile";
+import Insurence from "./scenes/insurence/Insurence";
+
+import Signup from "./scenes/Signup";
 function App() {
   const [theme, colorMode] = useMode();
   return (
@@ -26,16 +32,25 @@ function App() {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <div className="app">
+        <Routes>
+          
+        </Routes>
           <Navbar />
           {/* <Sidebar /> */}
           <main className="content">
             <Topbar />
             <Routes>
-              <Route path="/" exact element={<Dashboard />} />
+              {/* <Route path="/" exact element={<Dashboard />} /> */}
+              <Route path="/login" exact element={<Login />} />
+              <Route path="/signup" exact element={<Signup />} />
+              {/* <Route path="/" element={<Dash />} /> */}
+              <Route path="/login" exact element={<Login/>} />
+              <Route path="/" element={<Dash />} />
+              <Route path="/insurence" element={<Insurence />} />
               <Route path="/appoint" element={<Appointment />} />
               <Route path="/patientlist" element={<Contacts />} />
               <Route path="/infomet" element={<MeetingInfo />} />
-              <Route path="/profileupdate" element={<ProfileUpdate />} />
+              <Route path="/profileupdate" element={<Profile />} />
               <Route path="/line" element={<Line />} />
               <Route path="/calendar" element={<Calendar />} />
               <Route path="/doclist" element={<DoctorList />} />
@@ -45,7 +60,7 @@ function App() {
               <Route path="/avalaibletime" element={<AvalaibleTime />} />
               <Route path="/doctor" element={<Doctor />} />
               <Route path="/payment" element={<Payment />} />
-              <Route path="/symptoms" element={<Symptoms/>} />
+              <Route path="/symptoms" element={<Symptoms />} />
             </Routes>
           </main>
         </div>
