@@ -1,18 +1,19 @@
-import { Box, Typography } from "@mui/material";
-import { DataGrid, GridToolbar } from "@mui/x-data-grid";
+
+
+import { Box, Typography, useTheme } from "@mui/material";
+import { DataGrid } from "@mui/x-data-grid";
 import { tokens } from "../../theme";
-import { mockDataDocs } from "../../data/mockData";
-import Header from "../../components/Header";
-import { useTheme } from "@mui/material";
+import { mockDataAppoint } from "../../data/mockData";
 import VerifiedIcon from "@mui/icons-material/Verified";
 import PendingActionsIcon from "@mui/icons-material/PendingActions";
-const DoctorList = () => {
+import DoNotDisturbAltIcon from "@mui/icons-material/DoNotDisturbAlt";
+import Header from "../../components/Header";
+
+const Doctorlist = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
-
   const columns = [
-    { field: "id", headerName: "ID", flex: 1 },
-    { field: "docid", headerName: "Doctor Id", flex: 1 },
+    { field: "id", headerName: "ID" },
     {
       field: "sex",
       headerName: "Profile Picture",
@@ -48,50 +49,49 @@ const DoctorList = () => {
       flex: 1,
       cellClassName: "name-column--cell",
     },
-    { field: "time", headerName: "Time", flex: 1 },
-    { field: "date", headerName: "Date", flex: 1 },
-
     {
       field: "age",
       headerName: "Age",
+      type: "number",
+      headerAlign: "left",
+      align: "left",
+    },
+    {
+      field: "phone",
+      headerName: "Phone Number",
       flex: 1,
     },
     {
-      field: "specialization",
-      headerName: "Specialization",
+      field: "email",
+      headerName: "Email",
       flex: 1,
     },
     {
-      field: "fees",
-      headerName: "Fees",
-      flex: 1,
-    },
-    {
-      field: "status",
+      field: "accessLevel",
       headerName: "Status",
       flex: 1,
-      renderCell: ({ row: { status } }) => {
+      renderCell: ({ row: { access } }) => {
         return (
           <Box
-            width="80%"
+            width="60%"
             m="0 auto"
             p="5px"
             display="flex"
             justifyContent="center"
             backgroundColor={
-              status === "Done"
+              access === "Done"
                 ? colors.greenAccent[600]
-                : status === "notAttended"
+                : access === "notAttended"
                 ? colors.redAccent[700]
                 : colors.yellowAccent[700]
             }
             borderRadius="4px"
           >
-            {status === "Done" && <VerifiedIcon />}
-
-            {status === "Active" && <PendingActionsIcon />}
+            {access === "Done" && <VerifiedIcon />}
+            {access === "notAttended" && <DoNotDisturbAltIcon />}
+            {access === "Pending" && <PendingActionsIcon />}
             <Typography color={colors.grey[100]} sx={{ ml: "5px" }}>
-              {status}
+              {access}
             </Typography>
           </Box>
         );
@@ -100,8 +100,11 @@ const DoctorList = () => {
   ];
 
   return (
-    <Box m="18px">
-      <Header title="DOCTORS" subtitle="List of Doctors you have visited..." />
+    <Box m="20px">
+      <Header
+        title="Doctor List"
+        subtitle="The Doctor List you have visited"
+      />
       <Box
         m="40px 0 0 0"
         height="75vh"
@@ -113,7 +116,7 @@ const DoctorList = () => {
             borderBottom: "none",
           },
           "& .name-column--cell": {
-            color: colors.greenAccent[500],
+            color: colors.greenAccent[300],
           },
           "& .MuiDataGrid-columnHeaders": {
             backgroundColor: colors.blueAccent[700],
@@ -122,16 +125,7 @@ const DoctorList = () => {
           "& .MuiDataGrid-virtualScroller": {
             backgroundColor: colors.primary[400],
           },
-          "& .MuiDataGrid-footerContainer": {
-            borderTop: "none",
-            backgroundColor: colors.blueAccent[700],
-          },
-          "& .MuiCheckbox-root": {
-            color: `${colors.greenAccent[200]} !important`,
-          },
-          "& .MuiDataGrid-toolbarContainer .MuiButton-text": {
-            color: `${colors.grey[100]} !important`,
-          },
+        
           "& .MuiDataGrid-footerContainer": {
             borderTop: "none",
             display: "none",
@@ -144,14 +138,10 @@ const DoctorList = () => {
           },
         }}
       >
-        <DataGrid
-          rows={mockDataDocs}
-          columns={columns}
-          components={{ Toolbar: GridToolbar }}
-        />
+        <DataGrid rows={mockDataAppoint} columns={columns} />
       </Box>
     </Box>
   );
 };
 
-export default DoctorList;
+export default Doctorlist;
