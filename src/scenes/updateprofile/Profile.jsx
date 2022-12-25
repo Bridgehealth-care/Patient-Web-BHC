@@ -73,14 +73,14 @@ const Profile = () => {
             </span>
             <span className="text-green-500 rounded-xl w-24 text-md flex items-center justify-center space-x-3">
               <span className="w-2 h-2 bg-green-500 block rounded-2xl animate-pulse"></span>
-              <span className="font-bold font-xl">Active</span>
+              <span className="font-bold font-lg">Active</span>
             </span>
           </div>
         </div>
         <div className="flex flex-col space-y-3 text-lg p-4 bg-[#3767B1] rounded-2xl w-4/5 shadow-[0px_0px_12px_-2px_rgba(0,0,0,0.3)] shadow-baby_blue_links pl-9">
           {user_data.map((ele) => (
             <div className="flex  items-center space-x-9" key={ele.x}>
-              <span className="w-1/3 flex items-center space-x-2 text-white text-sm">
+              <span className="w-1/3 flex items-center space-x-2 text-white tracking-wide">
                 <span>{ele.z}</span>
                 <span>{ele.x}</span>
               </span>

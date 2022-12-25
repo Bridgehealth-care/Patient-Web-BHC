@@ -30,10 +30,10 @@ const Topbar = () => {
 
       <Box display="flex" className="absolute top-0 right-0 w-[200px] h-[50px]">
         <IconButton onClick={colorMode.toggleColorMode}>
-          {theme.palette.mode === "dark" ? (
-            <DarkModeOutlinedIcon />
-          ) : (
+          {theme.palette.mode === "light" ? (
             <LightModeOutlinedIcon />
+            ) : (
+              <DarkModeOutlinedIcon />
           )}
         </IconButton>
         <IconButton>
