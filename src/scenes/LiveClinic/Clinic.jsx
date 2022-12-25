@@ -10,7 +10,7 @@ const Clinic = () => {
     setSpecialization(event.target.value);
   };
   return (
-    <div className="ml-10 bg-[#3767B1] rounded-2xl w-[200px] h-[400px]">
+    <div className=" bg-[#3767B1] rounded-2xl w-[300px] h-[400px]">
       <div className="items-center flex flex-col mt-2 p-4">
         <span className="text-2xl font-semibold text-white mb-2">Live Clinic</span>
         {/* <span>1</span>
