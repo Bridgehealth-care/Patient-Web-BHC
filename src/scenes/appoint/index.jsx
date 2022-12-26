@@ -87,9 +87,7 @@ const Team = () => {
             }
             borderRadius="4px"
           >
-            {status === "Done" && <VerifiedIcon />}
-
-            {status === "Active" && <PendingActionsIcon />}
+          
             <Typography color={colors.grey[100]} sx={{ ml: "5px" }}>
               {status}
             </Typography>

@@ -92,9 +92,7 @@ const Doctorlist = () => {
             }
             borderRadius="4px"
           >
-            {access === "Done" && <VerifiedIcon />}
-            {access === "notAttended" && <DoNotDisturbAltIcon />}
-            {access === "Pending" && <PendingActionsIcon />}
+           
             <Typography color={colors.grey[100]} sx={{ ml: "5px" }}>
               {access}
             </Typography>
