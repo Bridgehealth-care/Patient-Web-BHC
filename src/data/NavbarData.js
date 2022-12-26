@@ -59,22 +59,22 @@ export const SidebarData = [
     icon: <AirplayIcon />,
     cName: "nav-text",
   },
-  {
-    title: "TDM",
-    path: "/tdm",
-    icon: <TimelineOutlinedIcon />,
-    cName: "nav-text",
-  },
+  // {
+  //   title: "TDM",
+  //   path: "/tdm",
+  //   icon: <TimelineOutlinedIcon />,
+  //   cName: "nav-text",
+  // },
   {
     title: "Avalaible Time",
     path: "/avalaibletime",
     icon: <MapOutlinedIcon />,
     cName: "nav-text",
   },
-  {
-    title: "Doctor",
-    path: "/doctor",
-    icon: <MapOutlinedIcon />,
-    cName: "nav-text",
-  },
+  // {
+  //   title: "Doctor",
+  //   path: "/doctor",
+  //   icon: <MapOutlinedIcon />,
+  //   cName: "nav-text",
+  // },
 ];

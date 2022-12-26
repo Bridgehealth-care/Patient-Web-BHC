@@ -1,5 +1,5 @@
 import { ColorModeContext, useMode } from "./theme";
-import { CssBaseline, ThemeProvider } from "@mui/material";
+import { AppBar, CssBaseline, ThemeProvider } from "@mui/material";
 import { Routes, Route } from "react-router-dom";
 import Topbar from "./scenes/global/Topbar";
 import Navbar from "./scenes/global/Navbar";
@@ -23,6 +23,7 @@ import Symptoms from "./scenes/symptopms";
 import Dash from "./scenes/dashboard/Dash";
 import Profile from "./scenes/updateprofile/Profile";
 import Insurence from "./scenes/insurence/Insurence";
+// import  from "./scenes/global/Appbar";
 
 import Signup from "./scenes/Signup";
 function App() {
@@ -36,6 +37,7 @@ function App() {
           
         </Routes>
           <Navbar />
+          {/* <Appbar /> */}
           {/* <Sidebar /> */}
           <main className="content">
             <Topbar />
@@ -45,7 +47,6 @@ function App() {
               <Route path="/signup" exact element={<Signup />} />
               {/* <Route path="/" exact element={<Dashboard />} /> */}
               {/* <Route path="/" element={<Dash />} /> */}
-              <Route path="/login" exact element={<Login/>} />
               <Route path="/" element={<Dash />} />
               <Route path="/insurence" element={<Insurence />} />
               <Route path="/appoint" element={<Appointment />} />

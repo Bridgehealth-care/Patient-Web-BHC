@@ -18,10 +18,10 @@ function Navbar() {
   };
   return (
     // <Box backgroundColor={colors.primary[400]}>
-    <Box className="bg-[#3767B1]">
-      <IconContext.Provider value={{ color: "#3767B1" }}>
+    <Box className="bg-[#3767B1] h-screen" >
+      <IconContext.Provider value={{ color: "#3767B1" }} className="h-screen">
         {/* <Box className="navbar" backgroundColor={colors.primary[400]}> */}
-        <Box className="navbar bg-[#3767B1]">
+        <Box className="navbar scroll-smooth h-[1100px] bg-[#3767B1]">
           <Link to="#" className="menu-bars">
             <MenuIcon onClick={showSidebar} />
           </Link>
