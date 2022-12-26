@@ -52,8 +52,8 @@ const Team = () => {
     { field: "date", headerName: "Date", flex: 1 },
 
     {
-      field: "age",
-      headerName: "Age",
+      field: "TdmId",
+      headerName: "Tdm ID",
       flex: 1,
     },
     {

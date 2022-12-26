@@ -3,7 +3,7 @@
 import { Box, Typography, useTheme } from "@mui/material";
 import { DataGrid } from "@mui/x-data-grid";
 import { tokens } from "../../theme";
-import { mockDataAppoint } from "../../data/mockData";
+import { mockdoc } from "../../data/mockData";
 import VerifiedIcon from "@mui/icons-material/Verified";
 import PendingActionsIcon from "@mui/icons-material/PendingActions";
 import DoNotDisturbAltIcon from "@mui/icons-material/DoNotDisturbAlt";
@@ -57,8 +57,13 @@ const Doctorlist = () => {
       align: "left",
     },
     {
-      field: "phone",
-      headerName: "Phone Number",
+      field: "specialization",
+      headerName: "Specilization",
+      flex: 1,
+    },
+    {
+      field: "fees",
+      headerName: "Fees",
       flex: 1,
     },
     {
@@ -138,7 +143,7 @@ const Doctorlist = () => {
           },
         }}
       >
-        <DataGrid rows={mockDataAppoint} columns={columns} />
+        <DataGrid rows={mockdoc} columns={columns} />
       </Box>
     </Box>
   );
