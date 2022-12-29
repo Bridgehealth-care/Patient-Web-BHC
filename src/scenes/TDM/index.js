@@ -7,10 +7,11 @@ import { useTheme } from "@mui/material";
 import AddLocationIcon from "@mui/icons-material/AddLocation";
 import AddLocationTwoToneIcon from "@mui/icons-material/AddLocationTwoTone";
 import SendIcon from "@mui/icons-material/Send";
-
+     import { useNavigate } from "react-router-dom";
 
 const TDMsection = () => {
   const theme = useTheme();
+      const navigate = useNavigate();
   const colors = tokens(theme.palette.mode);
 
   const columns = [
@@ -120,6 +121,7 @@ const TDMsection = () => {
             <Button
               color="secondary"
               variant="contained"
+              onClick={() => navigate("/avalaibletime")}
               sx={{ width: 50, height: 30 }}
             >
               Submit

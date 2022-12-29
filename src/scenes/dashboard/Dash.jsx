@@ -136,7 +136,6 @@ const Dashboard = () => {
               className="text-green-500 font-semibold absolute top-0 left-0 flex flex-col"
               color="secondary"
               variant="dot"
-              
             >
               Active
             </Badge>
@@ -144,7 +143,7 @@ const Dashboard = () => {
               {/* <button>Book</button> */}
               <button
                 type="submit"
-                onClick={() => navigate("/avalaibletime")}
+                onClick={() => navigate("/symptoms")}
                 className="inline-flex justify-center rounded-md border border-transparent bg-green-400 py-2 px-4 text-lg font-medium text-white shadow-sm hover:bg-green-900 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
               >
                 Book Appointment

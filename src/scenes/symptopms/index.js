@@ -5,10 +5,11 @@ import Loader from '../../components/Loader';
 import ReactReadMoreReadLess from "react-read-more-read-less";
 import { Box, Button } from '@mui/material'
 import Header from '../../components/Header'
-
+import { useNavigate } from "react-router-dom";
 
 
 const Symptoms = () => {
+    const navigate = useNavigate();
   const [symptoms, setSymptoms] = useState([])
   const [showLoader, setshowLoader] = useState(true)
   useEffect(() => {
@@ -89,6 +90,7 @@ const Symptoms = () => {
               <Button
                 color="secondary"
                 variant="contained"
+                onClick={() => navigate("/doctor")}
                 sx={{ width: 50, height: 30 }}
               >
                 Submit

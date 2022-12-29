@@ -7,9 +7,11 @@ import { useTheme } from "@mui/material";
 import { tokens } from "../../theme";
 import VerifiedTwoToneIcon from "@mui/icons-material/VerifiedTwoTone";
 import VerifiedIcon from "@mui/icons-material/Verified";
+     import { useNavigate } from "react-router-dom";
 const AvalaibleTime = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
+        const navigate = useNavigate();
   return (
     <>
       <Box m="18px">
@@ -196,8 +198,7 @@ const AvalaibleTime = () => {
                     // color="success"
                     // variant="contained"
                     // sx={{ fontSize: "1rem", color: "white" }}
-            className="inline-flex justify-center rounded-md border border-transparent bg-green-400 py-2 px-4 text-lg font-medium text-white shadow-sm hover:bg-green-900 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
-
+                    className="inline-flex justify-center rounded-md border border-transparent bg-green-400 py-2 px-4 text-lg font-medium text-white shadow-sm hover:bg-green-900 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
                   >
                     6.30
                   </button>
@@ -208,8 +209,7 @@ const AvalaibleTime = () => {
                     // variant="contained"
                     // sx={{ fontSize: "1rem", color: "white" }}
                     // disabled
-            className="inline-flex justify-center rounded-md border border-transparent bg-green-400 py-2 px-4 text-lg font-medium text-white shadow-sm hover:bg-green-900 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
-
+                    className="inline-flex justify-center rounded-md border border-transparent bg-green-400 py-2 px-4 text-lg font-medium text-white shadow-sm hover:bg-green-900 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
                   >
                     7.30
                   </button>
@@ -219,8 +219,7 @@ const AvalaibleTime = () => {
                     // color="success"
                     // variant="contained"
                     // sx={{ fontSize: "1rem", color: "white" }}
-            className="inline-flex justify-center rounded-md border border-transparent bg-green-400 py-2 px-4 text-lg font-medium text-white shadow-sm hover:bg-green-900 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
-
+                    className="inline-flex justify-center rounded-md border border-transparent bg-green-400 py-2 px-4 text-lg font-medium text-white shadow-sm hover:bg-green-900 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
                   >
                     8.15
                   </button>
@@ -230,8 +229,7 @@ const AvalaibleTime = () => {
                     // color="success"
                     // variant="contained"
                     // sx={{ fontSize: "1rem", color: "white" }}
-            className="inline-flex justify-center rounded-md border border-transparent bg-green-400 py-2 px-4 text-lg font-medium text-white shadow-sm hover:bg-green-900 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
-
+                    className="inline-flex justify-center rounded-md border border-transparent bg-green-400 py-2 px-4 text-lg font-medium text-white shadow-sm hover:bg-green-900 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
                   >
                     6.45
                   </button>
@@ -241,8 +239,7 @@ const AvalaibleTime = () => {
                     // color="success"
                     // variant="contained"
                     // sx={{ fontSize: "1rem", color: "white" }}
-            className="inline-flex justify-center rounded-md border border-transparent bg-green-400 py-2 px-4 text-lg font-medium text-white shadow-sm hover:bg-green-900 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
-
+                    className="inline-flex justify-center rounded-md border border-transparent bg-green-400 py-2 px-4 text-lg font-medium text-white shadow-sm hover:bg-green-900 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
                   >
                     7.45
                   </button>
@@ -252,8 +249,7 @@ const AvalaibleTime = () => {
                     // color="success"
                     // variant="contained"
                     // sx={{ fontSize: "1rem", color: "white" }}
-            className="inline-flex justify-center rounded-md border border-transparent bg-green-400 py-2 px-4 text-lg font-medium text-white shadow-sm hover:bg-green-900 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
-
+                    className="inline-flex justify-center rounded-md border border-transparent bg-green-400 py-2 px-4 text-lg font-medium text-white shadow-sm hover:bg-green-900 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
                   >
                     8.30
                   </button>
@@ -263,8 +259,7 @@ const AvalaibleTime = () => {
                     // color="success"
                     // variant="contained"
                     // sx={{ fontSize: "1rem", color: "white" }}
-            className="inline-flex justify-center rounded-md border border-transparent bg-green-400 py-2 px-4 text-lg font-medium text-white shadow-sm hover:bg-green-900 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
-
+                    className="inline-flex justify-center rounded-md border border-transparent bg-green-400 py-2 px-4 text-lg font-medium text-white shadow-sm hover:bg-green-900 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
                   >
                     8.45
                   </button>
@@ -274,8 +269,7 @@ const AvalaibleTime = () => {
                     // color="success"
                     // variant="contained"
                     // sx={{ fontSize: "1rem", color: "white" }}
-            className="inline-flex justify-center rounded-md border border-transparent bg-green-400 py-2 px-4 text-lg font-medium text-white shadow-sm hover:bg-green-900 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
-
+                    className="inline-flex justify-center rounded-md border border-transparent bg-green-400 py-2 px-4 text-lg font-medium text-white shadow-sm hover:bg-green-900 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
                   >
                     9.00
                   </button>
@@ -285,8 +279,7 @@ const AvalaibleTime = () => {
                     // color="success"
                     // variant="contained"
                     // sx={{ fontSize: "1rem", color: "white" }}
-            className="inline-flex justify-center rounded-md border border-transparent bg-green-400 py-2 px-4 text-lg font-medium text-white shadow-sm hover:bg-green-900 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
-
+                    className="inline-flex justify-center rounded-md border border-transparent bg-green-400 py-2 px-4 text-lg font-medium text-white shadow-sm hover:bg-green-900 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
                   >
                     9.30
                   </button>
@@ -327,8 +320,7 @@ const AvalaibleTime = () => {
                     // color="success"
                     // variant="contained"
                     // sx={{ fontSize: "1rem", color: "white" }}
-            className="inline-flex justify-center rounded-md border border-transparent bg-green-400 py-2 px-4 text-lg font-medium text-white shadow-sm hover:bg-green-900 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
-
+                    className="inline-flex justify-center rounded-md border border-transparent bg-green-400 py-2 px-4 text-lg font-medium text-white shadow-sm hover:bg-green-900 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
                   >
                     6.15
                   </button>
@@ -338,8 +330,7 @@ const AvalaibleTime = () => {
                     // color="success"
                     // variant="contained"
                     // sx={{ fontSize: "1rem", color: "white" }}
-            className="inline-flex justify-center rounded-md border border-transparent bg-green-400 py-2 px-4 text-lg font-medium text-white shadow-sm hover:bg-green-900 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
-
+                    className="inline-flex justify-center rounded-md border border-transparent bg-green-400 py-2 px-4 text-lg font-medium text-white shadow-sm hover:bg-green-900 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
                   >
                     7.15
                   </button>
@@ -350,8 +341,7 @@ const AvalaibleTime = () => {
                     // variant="contained"
                     // sx={{ fontSize: "1rem", color: "white" }}
                     // disabled
-            className="inline-flex justify-center rounded-md border border-transparent bg-green-400 py-2 px-4 text-lg font-medium text-white shadow-sm hover:bg-green-900 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
-
+                    className="inline-flex justify-center rounded-md border border-transparent bg-green-400 py-2 px-4 text-lg font-medium text-white shadow-sm hover:bg-green-900 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
                   >
                     8.00
                   </button>
@@ -361,8 +351,7 @@ const AvalaibleTime = () => {
                     // color="success"
                     // variant="contained"
                     // sx={{ fontSize: "1rem", color: "white" }}
-            className="inline-flex justify-center rounded-md border border-transparent bg-green-400 py-2 px-4 text-lg font-medium text-white shadow-sm hover:bg-green-900 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
-
+                    className="inline-flex justify-center rounded-md border border-transparent bg-green-400 py-2 px-4 text-lg font-medium text-white shadow-sm hover:bg-green-900 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
                   >
                     6.30
                   </button>
@@ -373,8 +362,7 @@ const AvalaibleTime = () => {
                     // variant="contained"
                     // sx={{ fontSize: "1rem", color: "white" }}
                     // disabled
-            className="inline-flex justify-center rounded-md border border-transparent bg-green-400 py-2 px-4 text-lg font-medium text-white shadow-sm hover:bg-green-900 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
-
+                    className="inline-flex justify-center rounded-md border border-transparent bg-green-400 py-2 px-4 text-lg font-medium text-white shadow-sm hover:bg-green-900 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
                   >
                     7.30
                   </button>
@@ -384,8 +372,7 @@ const AvalaibleTime = () => {
                     // color="success"
                     // variant="contained"
                     // sx={{ fontSize: "1rem", color: "white" }}
-            className="inline-flex justify-center rounded-md border border-transparent bg-green-400 py-2 px-4 text-lg font-medium text-white shadow-sm hover:bg-green-900 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
-
+                    className="inline-flex justify-center rounded-md border border-transparent bg-green-400 py-2 px-4 text-lg font-medium text-white shadow-sm hover:bg-green-900 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
                   >
                     8.15
                   </button>
@@ -395,8 +382,7 @@ const AvalaibleTime = () => {
                     // color="success"
                     // variant="contained"
                     // sx={{ fontSize: "1rem", color: "white" }}
-            className="inline-flex justify-center rounded-md border border-transparent bg-green-400 py-2 px-4 text-lg font-medium text-white shadow-sm hover:bg-green-900 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
-
+                    className="inline-flex justify-center rounded-md border border-transparent bg-green-400 py-2 px-4 text-lg font-medium text-white shadow-sm hover:bg-green-900 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
                   >
                     6.45
                   </button>
@@ -406,8 +392,7 @@ const AvalaibleTime = () => {
                     // color="success"
                     // variant="contained"
                     // sx={{ fontSize: "1rem", color: "white" }}
-            className="inline-flex justify-center rounded-md border border-transparent bg-green-400 py-2 px-4 text-lg font-medium text-white shadow-sm hover:bg-green-900 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
-
+                    className="inline-flex justify-center rounded-md border border-transparent bg-green-400 py-2 px-4 text-lg font-medium text-white shadow-sm hover:bg-green-900 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
                   >
                     7.45
                   </button>
@@ -417,8 +402,7 @@ const AvalaibleTime = () => {
                     // color="success"
                     // variant="contained"
                     // sx={{ fontSize: "1rem", color: "white" }}
-            className="inline-flex justify-center rounded-md border border-transparent bg-green-400 py-2 px-4 text-lg font-medium text-white shadow-sm hover:bg-green-900 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
-
+                    className="inline-flex justify-center rounded-md border border-transparent bg-green-400 py-2 px-4 text-lg font-medium text-white shadow-sm hover:bg-green-900 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
                   >
                     8.30
                   </button>
@@ -428,8 +412,7 @@ const AvalaibleTime = () => {
                     // color="success"
                     // variant="contained"
                     // sx={{ fontSize: "1rem", color: "white" }}
-            className="inline-flex justify-center rounded-md border border-transparent bg-green-400 py-2 px-4 text-lg font-medium text-white shadow-sm hover:bg-green-900 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
-
+                    className="inline-flex justify-center rounded-md border border-transparent bg-green-400 py-2 px-4 text-lg font-medium text-white shadow-sm hover:bg-green-900 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
                   >
                     8.45
                   </button>
@@ -439,8 +422,7 @@ const AvalaibleTime = () => {
                     // color="success"
                     // variant="contained"
                     // sx={{ fontSize: "1rem", color: "white" }}
-            className="inline-flex justify-center rounded-md border border-transparent bg-green-400 py-2 px-4 text-lg font-medium text-white shadow-sm hover:bg-green-900 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
-
+                    className="inline-flex justify-center rounded-md border border-transparent bg-green-400 py-2 px-4 text-lg font-medium text-white shadow-sm hover:bg-green-900 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
                   >
                     9.00
                   </button>
@@ -450,8 +432,7 @@ const AvalaibleTime = () => {
                     // color="success"
                     // variant="contained"
                     // sx={{ fontSize: "1rem", color: "white" }}
-            className="inline-flex justify-center rounded-md border border-transparent bg-green-400 py-2 px-4 text-lg font-medium text-white shadow-sm hover:bg-green-900 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
-
+                    className="inline-flex justify-center rounded-md border border-transparent bg-green-400 py-2 px-4 text-lg font-medium text-white shadow-sm hover:bg-green-900 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
                   >
                     9.15{" "}
                   </button>
@@ -462,8 +443,8 @@ const AvalaibleTime = () => {
         </Box>
       </Box>
       {/* <div m="30px 0 0 0" display="flex" justifyContent="space-evenly" className=''> */}
-        {/* <Box display="flex" alignItems="center"> */}
-          {/* <button
+      {/* <Box display="flex" alignItems="center"> */}
+      {/* <button
             // color="secondary"
             // variant="contained"
             // sx={{ width: 50, height: 30 }}
@@ -472,33 +453,32 @@ const AvalaibleTime = () => {
           >
             Back
           </button> */}
-        {/* </Box> */}
-        <div
-          // display="flex"
-          // sx={{ width: "15%" }}
-          // margin="18px"
-          // justifyContent="space-between"
-          className="flex flex-row mt-[50px] space-x-10 ml-10 "
+      {/* </Box> */}
+      <div
+        // display="flex"
+        // sx={{ width: "15%" }}
+        // margin="18px"
+        // justifyContent="space-between"
+        className="flex flex-row mt-[50px] space-x-10 ml-10 "
+      >
+        <button
+          // color="secondary"
+          // variant="contained"
+          // sx={{ width: 50, height: 30 }}
+          className="inline-flex absolute left-[150px] justify-center rounded-md border border-transparent bg-green-400 py-2 px-4 text-lg font-medium text-white shadow-sm hover:bg-green-900 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
         >
-          <button
-            // color="secondary"
-            // variant="contained"
-            // sx={{ width: 50, height: 30 }}
-            className="inline-flex absolute left-[150px] justify-center rounded-md border border-transparent bg-green-400 py-2 px-4 text-lg font-medium text-white shadow-sm hover:bg-green-900 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
-
-          >
-            Refresh
-          </button>
-          <button
-            // color="secondary"
-            // variant="contained"
-            // sx={{ width: 50, height: 30 }}
-            className="inline-flex absolute right-[60px] justify-center rounded-md border border-transparent bg-green-400 py-2 px-4 text-lg font-medium text-white shadow-sm hover:bg-green-900 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
-
-          >
-            Submit
-          </button>
-        </div>
+          Refresh
+        </button>
+        <button
+          // color="secondary"
+          // variant="contained"
+          // sx={{ width: 50, height: 30 }}
+          className="inline-flex absolute right-[60px] justify-center rounded-md border border-transparent bg-green-400 py-2 px-4 text-lg font-medium text-white shadow-sm hover:bg-green-900 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
+          onClick={() => navigate("/payment")}
+        >
+          Submit
+        </button>
+      </div>
       {/* </div> */}
     </>
   );

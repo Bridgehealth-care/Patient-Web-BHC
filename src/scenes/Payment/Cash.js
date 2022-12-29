@@ -10,6 +10,7 @@ const Cash = () => {
     <>
       <Box
         width="35vw"
+        height="60vh"
         display="flex"
         flexDirection="column"
         justifyContent="center"
@@ -24,7 +25,7 @@ const Cash = () => {
           color={colors.grey[100]}
           sx={{ m: "0 0 5px 0" }}
         >
-         The TDM guy will collect the Cash from You , No worries 😊
+          The TDM guy will collect the Cash from You , No worries 😊
         </Typography>
       </Box>
     </>

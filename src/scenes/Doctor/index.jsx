@@ -12,8 +12,9 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import { mockDataDoctorAppoint } from "../../data/mockData";
-
+    import { useNavigate } from "react-router-dom";
 const Doctor = () => {
+      const navigate = useNavigate();
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
  const [age, setAge] = React.useState("");
@@ -169,6 +170,7 @@ const Doctor = () => {
             <Button
               color="secondary"
               variant="contained"
+              onClick={() => navigate("/tdm")}
               sx={{ width: 50, height: 30 }}
             >
               Submit
