@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { TextField } from "@mui/material";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import LocalPhoneOutlinedIcon from "@mui/icons-material/LocalPhoneOutlined";
 // import WomanOutlinedIcon from '@mui/icons-material/WomanOutlined';
@@ -8,51 +9,57 @@ import EventOutlinedIcon from "@mui/icons-material/EventOutlined";
 import NearMeOutlinedIcon from "@mui/icons-material/NearMeOutlined";
 import ElderlyWomanOutlinedIcon from "@mui/icons-material/ElderlyWomanOutlined";
 import Person2OutlinedIcon from "@mui/icons-material/Person2Outlined";
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"
 
-
-const Profile = () => {
-  const [active, setActive] = useState("");
+const Update = () => {
   const user_data = [
     {
       x: "Phone Number",
       y: "96253368070",
       z: <LocalPhoneOutlinedIcon fontSize="small" />,
+      type: "tel"
     },
     {
       x: "Email",
       y: "divyanshi@gmail.com",
       z: <EmailOutlinedIcon fontSize="small" />,
+      type: "email",
     },
     {
       x: "Registered Date",
       y: "21 / 01 / 22",
       z: <EventOutlinedIcon fontSize="small" />,
+      type: "date",
     },
     {
       x: "ZIP Code",
       y: "121002",
       z: <NearMeOutlinedIcon fontSize="small" />,
+      type: "number",
     },
     {
       x: "Age",
       y: "86",
       z: <Person2OutlinedIcon fontSize="small" />,
+      type: "number",
     },
     {
       x: "Gender",
       y: "Female",
       z: <ElderlyWomanOutlinedIcon fontSize="small" />,
+      type: "text"
     },
     {
       x: "State",
       y: "Uttarakhand",
       z: <LocationOnOutlinedIcon fontSize="small" />,
+      type: "text",
     },
     {
       x: "Address",
       y: "R-39 / Yuho street",
       z: <HomeOutlinedIcon fontSize="small" />,
+      type: "text"
     },
   ];
 
@@ -60,16 +67,44 @@ const Profile = () => {
     <div className="mt-[50px] h-auto flex flex-col pl-3 items-center pt-2 font-open_sans">
       <div className="shadow-2xl rounded-2xl w-[90%]   pt-9  p-10 flex flex-col">
         <div className="flex h-32 items-center space-x-8 mb-5">
-          <img
+          {/* <img
             src="https://images.unsplash.com/photo-1479936343636-73cdc5aae0c3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8aW5kaWFuJTIwZ2lybHN8ZW58MHwyfDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
             alt=""
             className="rounded-full object-cover h-[120px] w-[120px]"
-          />
+          /> */}
+
+          <div>
+            <div className="mt-1 flex items-center">
+              <span className="inline-block h-24 w-24 overflow-hidden rounded-full bg-gray-100">
+                <svg
+                  className="h-full w-full text-gray-300"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z" />
+                </svg>
+              </span>
+              <button
+                type="button"
+                color="secondary"
+                className="ml-5 rounded-md border border-gray-300 bg-white py-2 px-3 text-sm font-medium leading-4 text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+              >
+                Change
+              </button>
+            </div>
+          </div>
+
           <div className="flex flex-col space-y-3">
-            <span className="font-bold text-2xl  ">Divyanshi Mehra</span>
-            <span className="text-green-500 rounded-xl w-24 text-md flex items-center justify-center space-x-3">
-              <span className="w-2 h-2 bg-green-500 block rounded-2xl animate-pulse"></span>
-              <span className="font-bold font-lg">Active</span>
+            <span className="font-bold text-2xl  ">
+              <TextField
+                type="text"
+                placeholder="Divyanshi Mehra"
+                color="secondary"
+                focused
+                label="Name"
+                variant="outlined"
+                fullWidth
+              />
             </span>
           </div>
         </div>
@@ -81,7 +116,14 @@ const Profile = () => {
                 <span>{ele.x}</span>
               </span>
               <span className="w-1/3 text-white tracking-wide font-medium">
-                {ele.y}
+                <TextField
+                  type={ele.type}
+                  placeholder={ele.y}
+                  color="secondary"
+                  focused
+                  variant="standard"
+                  fullWidth
+                />
               </span>
             </div>
           ))}
@@ -98,17 +140,14 @@ const Profile = () => {
           <button
             style={{ transform: "translateX(52pc) translateY(-3pc)" }}
             type="submit"
-            // onClick={() => setActive("one")}
-            
             className="inline-flex justify-center m-0 rounded-md border border-transparent bg-green-400 py-2 px-4 text-lg font-medium text-white shadow-sm hover:bg-green-900 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
           >
-            <Link to='/updateprofile'>Update Profile</Link>
+            <Link to="/profile">Save</Link>
           </button>
         </div>
       </div>
-      {/* <div className="shadow-2xl rounded-2xl w-[90%]   pt-9  p-10 flex flex-col">{active === "one" && <Update />}</div> */}
     </div>
   );
 };
 
-export default Profile;
+export default Update;

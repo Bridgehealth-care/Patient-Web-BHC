@@ -12,7 +12,7 @@ const Qrcode = () => {
   return (
     <Box
       width="35vw"
-      height="50vh"
+      height="60vh"
       sx={{
         border: "2px solid #d5d5d5",
         borderRadius: "5px",

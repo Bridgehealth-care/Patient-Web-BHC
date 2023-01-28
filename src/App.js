@@ -1,15 +1,17 @@
 import { ColorModeContext, useMode } from "./theme";
-import { CssBaseline, ThemeProvider } from "@mui/material";
+import { AppBar, CssBaseline, ThemeProvider } from "@mui/material";
 import { Routes, Route } from "react-router-dom";
 import Topbar from "./scenes/global/Topbar";
 import Navbar from "./scenes/global/Navbar";
 // import Sidebar from "./scenes/global/Sidebar";
- import Login from "./scenes/Login";
+import Login from "./scenes/Login";
+import ForgotPassword from "./scenes/forgot"
 import Dashboard from "./scenes/dashboard";
 import Appointment from "./scenes/appoint";
 import Contacts from "./scenes/patients";
 import MeetingInfo from "./scenes/infomeeting";
-import ProfileUpdate from "./scenes/updateprofile";
+import Profile from "./scenes/updateprofile/Profile";
+import ProfileUpdate from "./scenes/updateprofile/Update";
 import Line from "./scenes/line";
 import Calendar from "./scenes/calendar";
 import DoctorList from "./scenes/DoctorList";
@@ -21,10 +23,10 @@ import Doctor from "./scenes/Doctor";
 import Payment from "./scenes/Payment";
 import Symptoms from "./scenes/symptopms";
 import Dash from "./scenes/dashboard/Dash";
-import Profile from "./scenes/updateprofile/Profile";
 import Insurence from "./scenes/insurence/Insurence";
-
+// import  from "./scenes/global/Appbar";
 import Signup from "./scenes/Signup";
+
 function App() {
   const [theme, colorMode] = useMode();
   return (
@@ -32,10 +34,11 @@ function App() {
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <div className="app">
-        <Routes>
-          
-        </Routes>
+          <Routes>
+
+          </Routes>
           <Navbar />
+          {/* <Appbar /> */}
           {/* <Sidebar /> */}
           <main className="content">
             <Topbar />
@@ -43,14 +46,15 @@ function App() {
               {/* <Route path="/" exact element={<Dashboard />} /> */}
               <Route path="/login" exact element={<Login />} />
               <Route path="/signup" exact element={<Signup />} />
+              {/* <Route path="/" exact element={<Dashboard />} /> */}
               {/* <Route path="/" element={<Dash />} /> */}
-              <Route path="/login" exact element={<Login/>} />
               <Route path="/" element={<Dash />} />
               <Route path="/insurence" element={<Insurence />} />
               <Route path="/appoint" element={<Appointment />} />
               <Route path="/patientlist" element={<Contacts />} />
               <Route path="/infomet" element={<MeetingInfo />} />
-              <Route path="/profileupdate" element={<Profile />} />
+              <Route path="/profile" element={<Profile />} />
+              <Route path="/updateprofile" element={<ProfileUpdate />} />
               <Route path="/line" element={<Line />} />
               <Route path="/calendar" element={<Calendar />} />
               <Route path="/doclist" element={<DoctorList />} />
@@ -61,6 +65,7 @@ function App() {
               <Route path="/doctor" element={<Doctor />} />
               <Route path="/payment" element={<Payment />} />
               <Route path="/symptoms" element={<Symptoms />} />
+              <Route path="/forgotpass" element={<ForgotPassword />} />
             </Routes>
           </main>
         </div>

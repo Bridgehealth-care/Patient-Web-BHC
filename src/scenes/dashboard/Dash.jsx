@@ -1,5 +1,13 @@
-import { Badge, Box, Button, IconButton, Typography, useTheme } from "@mui/material";
+import {
+  Badge,
+  Box,
+  Button,
+  IconButton,
+  Typography,
+  useTheme,
+} from "@mui/material";
 import { tokens } from "../../theme";
+import { useNavigate } from "react-router-dom";
 import { mockRAppointments } from "../../data/mockData";
 import DownloadOutlinedIcon from "@mui/icons-material/DownloadOutlined";
 import AccessibleIcon from "@mui/icons-material/Accessible";
@@ -25,6 +33,7 @@ import PaidIcon from "@mui/icons-material/Paid";
 
 const Dashboard = () => {
   const theme = useTheme();
+  const navigate = useNavigate();
   const colors = tokens(theme.palette.mode);
 
   return (
@@ -71,11 +80,7 @@ const Dashboard = () => {
               subtitle="Doctor Appointment"
               progress="0.25"
               increase="+3"
-              icon={
-                <AccessibleIcon
-                  sx={{ color: "#fff", fontSize: "26px" }}
-                />
-              }
+              icon={<AccessibleIcon sx={{ color: "#fff", fontSize: "26px" }} />}
             />
           </Box>
           <Box
@@ -91,11 +96,7 @@ const Dashboard = () => {
               subtitle="Medical records"
               progress="0.50"
               increase="+21%"
-              icon={
-                <EventIcon
-                  sx={{ color: "#fff", fontSize: "26px" }}
-                />
-              }
+              icon={<EventIcon sx={{ color: "#fff", fontSize: "26px" }} />}
             />
           </Box>
           <Box
@@ -106,41 +107,48 @@ const Dashboard = () => {
             justifyContent="center"
             className="rounded-2xl bg-[#3767B1]"
           >
-            <StatBox
-              title="7.00 hours"
-              subtitle="Book Appoint"
-              progress="0.50"
-              increase="+21%"
-              icon={
-                <AccessTimeIcon
-                  sx={{ color: "#fff", fontSize: "26px" }}
-                />
-              }
-            />
-          </Box>
-          <Box
-            gridColumn="span 3"
-            // backgroundColor={colors.primary[400]}
-            display="flex"
-            alignItems="center"
-            justifyContent="center"
-            className="rounded-2xl bg-[#3767B1]"
-          >
-
             <StatBox
               title="5,134"
               subtitle="INR Money"
               progress="0.18"
               increase="+33%"
-              icon={
-                <PaidIcon
-                  sx={{ color: "#fff", fontSize: "26px" }}
-                />
-              }
+              icon={<PaidIcon sx={{ color: "#fff", fontSize: "26px" }} />}
             />
-            <Badge className="mt-[120px] font-semibold mr-2 absolute bottom-0 right-0" color="secondary" variant="dot">
+          </Box>
+          <Box
+            gridColumn="span 3"
+            // backgroundColor={colors.primary[400]}
+            display="flex"
+            flexDirection="column"
+            alignItems="center"
+            justifyContent="center"
+            className="rounded-2xl bg-[#3767B1]"
+          >
+            {/* <Box
+              title="7.00 hours"
+              subtitle="Book Appoint"
+              // progress="0.50"
+              // increase="+21%"
+              icon={<AccessTimeIcon sx={{ color: "#fff", fontSize: "26px" }} />}
+            /> */}
+            <span className="text-lg font-bold">Insurence:</span>
+            <Badge
+              className="text-green-500 font-semibold absolute top-0 left-0 flex flex-col"
+              color="secondary"
+              variant="dot"
+            >
               Active
             </Badge>
+            <div>
+              {/* <button>Book</button> */}
+              <button
+                type="submit"
+                onClick={() => navigate("/symptoms")}
+                className="inline-flex justify-center rounded-md border border-transparent bg-green-400 py-2 px-4 text-lg font-medium text-white shadow-sm hover:bg-green-900 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
+              >
+                Book Appointment
+              </button>
+            </div>
           </Box>
 
           {/* ROW 2 */}
@@ -199,11 +207,7 @@ const Dashboard = () => {
               colors={colors.grey[100]}
               p="15px"
             >
-              <Typography
-                color={"#fff"}
-                variant="h5"
-                fontWeight="600"
-              >
+              <Typography color={"#fff"} variant="h5" fontWeight="600">
                 Recent Appointments
               </Typography>
             </Box>
@@ -291,7 +295,7 @@ const Dashboard = () => {
               </div>
             </div>
           </div> */}
-          <Box className="ml-10 w-8 ">
+          <Box className="ml-6 w-8 ">
             <Clinic />
           </Box>
         </Box>

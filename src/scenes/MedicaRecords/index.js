@@ -151,6 +151,38 @@ const MedicalRecord = () => {
         >
           Health Report
         </Box>
+      
+
+        <Box
+          backgroundColor="green"
+          width="250px"
+          height="40px"
+          m="0 auto"
+          p="5px"
+          display="flex"
+          justifyContent="center"
+          sx={{ cursor: "pointer" }}
+          borderRadius="6px"
+        >
+          <Typography color={colors.grey[100]} sx={{ ml: "5px" }}>
+            Insurence
+          </Typography>
+        </Box>
+        <Box
+          backgroundColor="green"
+          width="250px"
+          height="40px"
+          m="0 auto"
+          p="5px"
+          display="flex"
+          justifyContent="center"
+          sx={{ cursor: "pointer" }}
+          borderRadius="6px"
+        >
+          <Typography color={colors.grey[100]} sx={{ ml: "5px" }}>
+            Prescription
+          </Typography>
+        </Box>
         <Box
           backgroundColor="green"
           width="250px"

@@ -1,14 +1,10 @@
 import React from "react";
-
 const Update2 = () => {
   return (
     <form action="#" method="POST">
-      {/* <div className="overflow-hidden  shadow sm:rounded-md"> */}
-      <div className="bg-slate-100 w-auto m-4 rounded-2xl mt-10 px-4 py-5 sm:p-6">
+      <div className=" w-auto m-4 rounded-2xl mt-10 px-4 py-5 sm:p-6">
         <div>
-          <label className="block text-xl font-medium text-white">
-            Photo
-          </label>
+          <label className="block text-xl font-medium text-white">Photo</label>
           <div className="mt-1 flex items-center">
             <span className="inline-block h-12 w-12 overflow-hidden rounded-full bg-gray-100">
               <svg

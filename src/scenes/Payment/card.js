@@ -49,6 +49,7 @@ const Card = () => {
   return (
     <Box
       width="35vw"
+      height="60vh"
       display="flex"
       flexDirection="column"
       justifyContent="space-evenly"
